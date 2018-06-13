@@ -11,13 +11,14 @@
     <div>
       <div class="container">
         <div class="left">
-          <a class="brand">
+          <a href="" class="brand">
             <img src="img/logo.png" width="111" height="18" alt="Техномарт">
           </a>
           <div class="search">
-            <input type="submit" class="btn btn-search">
-            <input type="search" placeholder="Поиск:">
-          </div>
+              <input type="submit" class="btn btn-search">
+              <input type="search" placeholder="Поиск:" id="search">
+              <label for="search" class="visually-hidden">Поиск по сайту</label>
+            </div>
         </div>
         <div class="right">
           <div class="bookmarks">
@@ -113,13 +114,13 @@
         <h2>Дрели</h2>
         <p>Соседям на радость</p>
         <img src="img/slide-drill.jpg" width="620" height="266" alt="Дрели">
-        <a href="catalog">Открыть каталог</a>
+        <a href="catalog.html">Открыть каталог</a>
       </li>
       <li class="slide">
           <h2>Перфораторы</h2>
           <p>Настоящие мужские игрушки</p>
           <img src="img/slide-hammer-drill.jpg" width="620" height="266" alt="Перфораторы">
-        <a href="catalog">Открыть каталог</a>
+        <a href="catalog.html">Открыть каталог</a>
       </li>
     </ul>
     <div class="popular-products">
@@ -265,16 +266,16 @@
           <a href="https://yandex.ru/maps/">
             <img src="img/map-small.jpg" width="300" height="158" alt="Большая Конюшенная ул., 19">
           </a>
-          <a href="#">Заблудились? Напишите нам</a>
+          <button type="button" class="btn">Заблудились? Напишите нам</button>
         </article>
       </div>
     </div>
   </main>
   <footer>
     <div class="header">
-      <div class="brand">
-        <img src="/img/logo.png" width="111" height="18" alt="Техномарт">
-      </div>
+      <a href="" class="brand">
+        <img src="img/logo.png" width="111" height="18" alt="Техномарт">
+      </a>
       <ul class="menu-items">
         <li class="menu-item">
           <a href="#">Компания</a>
@@ -351,26 +352,35 @@
       </div>
     </div>
   </footer>
-  <div class="modal">
+  <div class="modal write-us">
     <div class="modal-header">
+      <button type="button" class="btn btn-close">Закрыть окно</button>
     </div>
-    <form action="" class="modal-body">
+    <form action="" type="get" class="modal-body">
       <div>
-        <label>Ваше имя:</label>
-        <input type="text" placeholder="Имя Фамилия">
+        <label for="feedback-form-name">Ваше имя:</label>
+        <input type="text" id="feedback-form-name" placeholder="Имя Фамилия">
       </div>
       <div>
-        <label>Ваш e-mail:</label>
-        <input type="text" placeholder="email@example.com">
+        <label for="feedback-form-email">Ваш e-mail:</label>
+        <input type="text" id="feedback-form-email" placeholder="email@example.com">
       </div>
       <div>
-        <label>Текст письма:</label>
-        <textarea rows="5"></textarea>
+        <label for="feedback-form-message">Текст письма:</label>
+        <textarea rows="5" id="feedback-form-message"></textarea>
       </div>
       <div>
-        <button>Отправить</button>
+        <input type="submit" value="Отправить">
       </div>
     </form>
+  </div>
+  <div class="modal map-popup">
+      <div class="modal-header">
+        <button type="button" class="btn btn-close">Закрыть окно</button>
+      </div>
+      <div class="modal-body">
+        <img src="img/map.jpg" width="940" height="446" alt="Карта">
+      </div>
   </div>
 </body>
 
