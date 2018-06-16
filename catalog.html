@@ -13,16 +13,18 @@
     <div class="header-top">
       <div class="container">
         <div class="header-top-left">
-          <a href="index" class="brand">
-            <img src="img/logo.png" width="111" height="18" alt="Техномарт">
-          </a>
+          <div class="logo">
+            <a href="index" class="brand">
+              <img src="img/logo.png" width="111" height="18" alt="Техномарт">
+            </a>
+          </div>
           <div class="search">
-              <form action="https://echo.htmlacademy.ru" method="get">
-                <input type="submit" class="btn btn-search">
-                <input type="search" placeholder="Поиск:" id="search">
-                <label for="search" class="visually-hidden">Поиск по сайту</label>
-              </form>
-            </div>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <input type="submit" class="btn btn-search">
+              <input type="search" placeholder="Поиск:" id="search">
+              <label for="search" class="visually-hidden">Поиск по сайту</label>
+            </form>
+          </div>
         </div>
         <div class="header-top-right">
           <div class="bookmarks">
@@ -85,24 +87,30 @@
     </div>
   </header>
   <main>
-    <div class="container">
-      <ul class="breadcrumbs">
-        <li class="breadcrumb">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumb">
-          <a href="#">Каталог</a>
-        </li>
-        <li class="breadcrumb">
-          <a href="#">Инструмент</a>
-        </li>
-        <li class="breadcrumb">
-          <a href="#">Перфораторы</a>
-        </li>
-      </ul>
-      <div class="catalog-header">
-        <h2 class="catalog-header-title">Перфораторы</h2>
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumb-items">
+          <li class="breadcrumb-item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#">Каталог</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#">Инструмент</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#">Перфораторы</a>
+          </li>
+        </ul>
       </div>
+    </div>
+    <div class="catalog-header">
+      <div class="container">
+          <h2 class="catalog-header-title">Перфораторы</h2>
+      </div>
+    </div>
+    <div class="container">
       <div class="catalog-container">
         <aside class="catalog-filter">
           <form class="form-filter" method="GET" action="https://echo.htmlacademy.ru">
@@ -348,7 +356,7 @@
       </div>
     </div>
   </footer>
-  <div class="modal">
+  <div class="modal" style="display: none;">
     <div class="modal-header">
       <button type="button" class="btn btn-close">Закрыть</button>
     </div>
