@@ -60,6 +60,10 @@ body{
     background-color: #f3f7f8;
 }
 
+.header-bottom .container:nth-of-type(1){
+    min-height: 158px;
+}
+
 .header-top-left,
 .header-top-right{
     display: flex;
@@ -99,6 +103,7 @@ body{
     display: flex;
     flex-direction: column;
 }
+
 .contacts span{
     display: flex;
     justify-content: center;
@@ -133,7 +138,7 @@ footer .contacts{
     display: flex;
 }
 
-.user-navigation .user-navigation-item{
+.user-navigation-item{
     list-style: none;    
     min-width: 121px;
     height: 45px; 
@@ -167,7 +172,7 @@ header .menu-items{
     box-shadow: inset 0 -5px 0 #293449;
 }
 
-.menu-items .menu-item{
+.menu-item{
     list-style: none;
 }
 
@@ -183,17 +188,60 @@ footer .menu-item a{
     line-height: 24px;
 }
 
-.slider .slide{
+.site-section{
+    width: 300px;
+    min-height: 123px;
+}
+
+.site-section-title{
+    margin-left:22px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.site-section .btn{
+    display: block;
+    width: 135px;
+    min-height: 38px;
+    margin-left: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.1)
+}
+
+.section-material{
+    background-color: #ffbf47;
+}
+
+.section-tool{
+    background-color: #3bbce3;
+}
+
+.section-equipment{
+    background-color: #dc91d8;
+}
+
+.section-sale{
+    background-color: #8ed78f;
+}
+
+.section-delivery{
+    background-color: #ffc047;
+}
+
+.slide{
     list-style: none;
 }
 
-.slide .slide-title{
+.slide-title{
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
     text-transform: uppercase;
 }
-.slide .slide-desc{
+.slide-desc{
     font-size: 18px;
     line-height: 24px;
 }
@@ -242,8 +290,8 @@ footer .menu-item a{
     background-color: #ee3643;
 }
 
-.popular .catalog-items,
-.popular .vendor-items{
+.catalog-items,
+.vendor-items{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -252,23 +300,24 @@ footer .menu-item a{
 }
 
 .catalog-item,
-.popular .vendor-item{
+.vendor-item{
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    text-align: center;
     width: 220px;
     margin-bottom:20px;
+    font-family: "PTSans Bold";
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
     border: 1px solid #eaeaea;
     color: #000000;
 }
 
-.product-item img{
-    padding-top:2px;
-}
-
-.popular .vendor-item{
+.vendor-item{
     justify-content: center;
 }
 
@@ -297,11 +346,13 @@ footer .menu-item a{
     line-height: 30px;
     font-weight: normal;
     text-transform: uppercase;
+    color: #000000;
 }
 
 .service-header-desc{
     font-size: 13px;
     line-height: 24px;
+    color: #000000;
 }
 
 .service-container{
@@ -311,6 +362,7 @@ footer .menu-item a{
 .service-items{
     display: flex;
     flex-direction: column;
+    margin-right: 80px
 }
 
 .service-item{
@@ -341,11 +393,13 @@ footer .menu-item a{
 .service-desc{
     font-size: 13px;
     line-height: 24px;
+    color: #000000;
 }
 
 .service-delivery{
     background-image: url("../img/delivery.png");
     background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
 }
 
 .service-guarantee{
@@ -411,11 +465,14 @@ footer .address{
 
 .breadcrumb-items{
     display: flex;
+    margin: 0;
+    padding: 0;
+    margin: 24px 0 16px 0;
 }
 
 .breadcrumb-item{
     list-style: none;
-    margin-left:40px;
+    margin-right:40px;
 }
 
 .breadcrumb-item a{
@@ -427,6 +484,10 @@ footer .address{
 }
 
 
+.catalog-header{
+    margin-bottom:20px;
+}
+
 .catalog-header .container{
     background-color: #f2f6f8;
 }
@@ -436,5 +497,158 @@ footer .address{
     font-weight: normal;
     font-size: 30px;
     line-height: 30px;
+    text-transform: uppercase;
     color: #32425c;
+}
+
+.catalog-aside{
+    width: 220px;
+}
+
+.catalog-section{
+    width: 700px;
+}
+
+.aside-header,
+.section-header{
+    height: 38px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f7f3ec;
+}
+
+.aside-header h2,
+.section-header h2{
+    margin: 0;
+    margin-left: 18px;
+    padding: 0;
+    font-family: "PTSans";
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.form-filter fieldset{
+    border: none;
+}
+
+.form-filter legend{
+    font-family: "PTSans";
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.form-filter label{
+    font-family: "PTSans";
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.catalog-sort-options,
+.catalog-sort-orders{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sort-option{
+    list-style: none;
+}
+
+.sort-option a{
+    font-family: "PTSans";
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.3);
+}
+
+.sort-order a{
+    color: #c5c5c5;
+}
+
+.catalog-sort-options,
+.catalog-sort-orders{
+    display: flex;
+}
+
+.sort-option{
+    margin-right: 20px;
+    border-bottom: 1px dotted #ee3643;
+}
+
+.sort-order{
+    margin-right: 10px;
+}
+
+.sort-option--active a,
+.sort-order--active a{
+    color: #ee3643;
+}
+
+.sort-option--active{
+    border:none;
+}
+
+
+.catalog-footer{
+    height: 261px;
+    margin-top: 60px;
+    background-color: #f2f6f8;
+}
+
+.catalog-footer .container{
+    flex-direction: column;
+}
+
+.catalog-footer-title{
+    margin-top: 68px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.catalog-footer-desc{
+    width: 850px;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.catalog-footer-title,
+.catalog-footer-desc{
+    color: #000000;
+}
+
+.pagination{
+    display:flex;
+    margin: 0;
+    padding: 0;
+    margin-top:52px;
+}
+
+.pagination-item{
+    list-style: none;
+    margin-right: 10px;
+}
+
+.pagination-btn{
+    min-width:38px;
+    height: 38px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+.pagination-btn--current{
+    color: #ffffff;
+    background-color: #ee3643;
 }
