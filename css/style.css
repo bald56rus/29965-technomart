@@ -55,8 +55,12 @@ body{
     background-color: #293449;
 }
 
+.search{
+    display: flex;
+}
+
 .header-bottom{
-    height: 278px;
+    min-height: 278px;
     display: flex;
     flex-direction: column;
     color:#ffffff;
@@ -80,7 +84,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 220px;
-    height: 47px;
+    min-height: 47px;
     background-color: #ee3643;
     box-shadow: inset 0 -5px 0 rgba(0,0,0,0.24);
 }
@@ -99,7 +103,8 @@ body{
     color: #ee3643;
 }
 
-.contacts{
+.header-contacts,
+.footer-contacts{
     display: flex;
     flex-direction: column;
 }
@@ -110,11 +115,11 @@ body{
     align-items: center;
 }
 
-header .contacts{
+.header-contacts{
     width: 270px;
 }
 
-footer .contacts{
+.footer-contacts{
     flex-direction: column-reverse;
 }
 
@@ -136,13 +141,14 @@ footer .contacts{
 
 .user-navigation{
     display: flex;
+    align-items: baseline;
     margin: 0;
+    padding: 0;
 }
 
 .user-navigation-item{
-    list-style: none;    
-    min-width: 121px;
-    height: 45px; 
+    list-style: none;
+    min-height: 45px; 
     margin-right: 10px;
     display: flex;
     justify-content: center;
@@ -172,7 +178,7 @@ footer .contacts{
 
 .menu-items{
     width: 100%;
-    height: 60px;
+    min-height: 60px;
     padding: 0;
     margin: 0;
     display: flex;
@@ -253,6 +259,7 @@ footer .menu-item a{
     margin-left: 25px;
     text-decoration: none;
     text-transform: uppercase;
+    border-radius: 3px;
     color: #ffffff;
     background-color: rgba(0,0,0,0.1)
 }
@@ -309,7 +316,7 @@ footer .menu-item a{
     left: 25px;
     bottom: 22px;
     width: 195px;
-    height: 38px;
+    min-height: 38px;
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;
@@ -335,7 +342,7 @@ footer .menu-item a{
     flex-direction: column;
 }
 
-.popular .popular-header{
+.popular-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -354,11 +361,12 @@ footer .menu-item a{
 
 .popular-header-btn{
     width: 253px;
-    height: 38px;;
+    min-height: 38px;;
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
     border:none;
+    border-radius: 3px;
     background-color: #ee3643;
 }
 
@@ -389,16 +397,25 @@ footer .menu-item a{
     color: #000000;
 }
 
+.catalog-item-price-old{
+    font-family: "PTSans Bold";
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 18px;
+    text-decoration: line-through;
+    color: #a9a9a9;
+}
+
 .vendor-item{
     justify-content: center;
 }
 
 .catalog-items .catalog-item{
-    height: 318px;
+    min-height: 318px;
 }
 
 .vendor-items .vendor-item{
-    height: 145px;
+    min-height: 145px;
 }
 
 .service{
@@ -410,7 +427,7 @@ footer .menu-item a{
 }
 
 .service-header{
-    margin-top: 68px;
+    padding-top: 68px;
 }
 
 .service-header-title{
@@ -429,6 +446,7 @@ footer .menu-item a{
 
 .service-container{
     display: flex;
+    min-height: 522px;
 }
 
 .service-items{
@@ -442,8 +460,9 @@ footer .menu-item a{
 }
 
 .service-item{
-    height: 61px;
-    padding-left: 22px; 
+    min-height: 61px;
+    padding-top: 20px;
+    padding-left: 22px;
     font-size: 21px;
     line-height: 30px;
     font-weight: 700;
@@ -463,6 +482,7 @@ footer .menu-item a{
     line-height: 36px;
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
     color: #32425c;
 }
 
@@ -490,6 +510,7 @@ footer .menu-item a{
 
 .about-services{
     flex-grow: 1;
+    position: relative;
 }
 
 .about-us{
@@ -589,7 +610,7 @@ footer .address{
 
 .aside-header,
 .section-header{
-    height: 38px;
+    min-height: 38px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -679,7 +700,7 @@ footer .address{
 
 
 .catalog-footer{
-    height: 261px;
+    min-height: 261px;
     margin-top: 60px;
     background-color: #f2f6f8;
 }
@@ -721,12 +742,12 @@ footer .address{
 
 .pagination-btn{
     min-width:38px;
-    height: 38px;
+    min-height: 38px;
     border: 1px solid #e5e5e5;
     background-color: #ffffff;
 }
 
-.pagination-btn--current{
+.pagination-btn-current{
     color: #ffffff;
     background-color: #ee3643;
 }
