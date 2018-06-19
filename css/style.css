@@ -93,6 +93,15 @@ body{
     justify-content: flex-end;
 }
 
+.bookmark,
+.cart,
+.checkout{
+    font-size: 17px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .header-bottom-title{
     width:200px;
     font-family: "Cuprum Italic";
@@ -139,27 +148,59 @@ body{
     color: #32425c;
 }
 
-.user-navigation{
+.menu-items{
     display: flex;
+    justify-content: space-around;
     align-items: baseline;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-.user-navigation-item{
-    list-style: none;
-    min-height: 45px; 
+.menu-link{
+    display: inline-block;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+.user-navigation .menu-item{
     margin-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.user-navigation .menu-item:last-of-type{
+    margin-right: 0;
+}
+
+.user-navigation .menu-link{
     font-size: 21px;
     line-height: 21px;
+    padding: 12px 0px;
+    color: #000000;
     background-color: #ffffff;
 }
 
-.user-navigation-item:last-of-type{
-    margin: 0;
+.user-navigation .menu-link:hover{
+    color: #ee3643;
+}
+
+.user-navigation .menu-link:active{
+    color: rgba(0,0,0,0.3)
+}
+
+.site-navigation .menu-items{
+    background-color: #32425c;
+    box-shadow: inset 0 -5px 0 #293449;
+}
+
+.site-navigation .menu-link{
+    padding: 21px 30px 22px 30px;
+    font-size: 17px;
+    line-height: 17px;
+    color: #ffffff;
+}
+
+.btn-login{
+    padding: 14px 26px 16px 47px;
 }
 
 .btn{
@@ -176,31 +217,12 @@ body{
     color: #000000;
 }
 
-.menu-items{
-    width: 100%;
-    min-height: 60px;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #32425c;
-    
+.site-navigation .menu-link:hover{
+    background-color: #293449;
 }
-
-header .menu-items{
-    box-shadow: inset 0 -5px 0 #293449;
-}
-
-.menu-item{
-    list-style: none;
-}
-
-.menu-item a{
-    font-size: 17px;
-    line-height: 17px;
-    text-decoration: none;
-    color: #ffffff;
+.site-navigation .menu-link:active{
+    color: rgba(255,255,255,0.5);
+    background-color: #1d2739;
 }
 
 footer .menu-item a{
@@ -326,6 +348,10 @@ footer .menu-item a{
     border-radius: 3px;
 }
 
+.btn-catalog:hover{
+    background-color: #ca2c37;
+}
+
 .btn-prev-slide{
     position: absolute;
     top: 114px;
@@ -340,6 +366,7 @@ footer .menu-item a{
 
 .popular .container{
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .popular-header{
@@ -388,26 +415,91 @@ footer .menu-item a{
     align-items: center;
     text-align: center;
     width: 220px;
-    margin-bottom:20px;
+    margin-bottom:20px;    
+    border: 1px solid #eaeaea;
+}
+
+.catalog-item{
+    position: relative;
+}
+
+.catalog-item-img{
+    position: absolute;
+}
+
+.catalog-item-actions{
+    display: none;
+    position: absolute;
+    top:44px;
+    flex-direction: column;
+}
+
+.catalog-item-title{
     font-family: "PTSans Bold";
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
-    border: 1px solid #eaeaea;
+    margin: 0;
+    padding: 0;
+    margin-top: 183px;
+    width: 160px;
     color: #000000;
 }
 
+.catalog-item-price,
 .catalog-item-price-old{
     font-family: "PTSans Bold";
     font-weight: 700;
     font-size: 17px;
     line-height: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.catalog-item-price-old{
+    position: relative;
+    bottom: 10px;
+}
+
+.catalog-item-price::after{
+    content: "";
+    position: relative;
+    left: 40px;
+    border: 20px solid #ee3643;
+    border-right-width: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.catalog-item-price-old{    
     text-decoration: line-through;
     color: #a9a9a9;
 }
 
+.catalog-item .btn{
+    position: absolute;
+    bottom: 21px;
+    padding: 0px 20px 0px 36px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #ee3643;
+}
+
 .vendor-item{
     justify-content: center;
+}
+
+.catalog-item:hover .catalog-item-img{
+    display: none;
+}
+
+.catalog-item:hover .catalog-item-actions{
+    display: flex;
+}
+
+.catalog-item:hover,
+.vendor-item:hover{
+    box-shadow: 10px 10px 25px rgba(41, 52, 73, 0.5);
 }
 
 .catalog-items .catalog-item{
@@ -471,6 +563,10 @@ footer .menu-item a{
     box-shadow: inset 0 -1px 0 #4d637b;
 }
 
+.service-item:hover{
+    background-color: #293449;
+}
+
 .service-item.active{
     background-color: #ffffff;
     color: #32425c;
@@ -524,8 +620,7 @@ footer .menu-item a{
     text-transform: uppercase;
 }
 
-.about-us-desc
-{
+.about-us-desc{
     font-family: "PTSans";
     font-size: 13px;
     line-height: 24px;
