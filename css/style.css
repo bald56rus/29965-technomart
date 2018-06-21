@@ -41,12 +41,23 @@ body{
     font-style: normal;
     color: #ffffff;
 }
-
 .container{
     width: 940px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+}
+
+.btn{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 3px;
 }
 
 .header-top{
@@ -60,7 +71,6 @@ body{
 }
 
 .header-bottom{
-    min-height: 278px;
     display: flex;
     flex-direction: column;
     color:#ffffff;
@@ -215,6 +225,11 @@ body{
     color: rgba(0,0,0,0.3)
 }
 
+.site-navigation{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
 .site-navigation .menu-items{
     background-color: #32425c;
     box-shadow: inset 0 -5px 0 #293449;
@@ -227,25 +242,15 @@ body{
     color: #ffffff;
 }
 
-.btn-login{
-    padding: 14px 26px 16px 47px;
-}
-
-.btn{
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 14px;
-    line-height: 18px;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px 0px;
-    border: none;
-    border-radius: 3px;
-}
-
 .user-navigation .btn{
+    padding: 12px 24px;;
     text-decoration: none;
     color: #000000;
+}
+
+.user-navigation .btn-login{
+    padding-right: 26px;
+    padding-left: 47px;    
 }
 
 .site-navigation .menu-link:hover{
@@ -284,9 +289,8 @@ body{
     margin-bottom: 20px;
 }
 
-.promo-section-slider{
+.slider{
     display: flex;
-    width: 620px;
     margin: 0;
     padding: 0;
 }
@@ -308,6 +312,11 @@ body{
     margin-left: 25px;
     color: #ffffff;
     background-color: rgba(0,0,0,0.1)
+}
+
+.promo-section-slider{
+    position: relative;
+    width: 620px;
 }
 
 .promo-section-material{
@@ -334,33 +343,42 @@ body{
     position: relative;
     width: 620px;
     height: 266px;
+    z-index: -100px;
+}
+
+.slide-content{
+    position: absolute;
+    top: 0;
+    padding-top: 27px;
+    padding-left: 24px;
+}
+
+.slider-controls{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 620px;
+    padding: 114px 25px 20px 0px;
 }
 
 .slide-title{
-    position: absolute;
-    top: 27px;
-    left: 24px;
+    margin: 0;
+    padding: 0;
     font-weight: 700;
     font-size: 36px;
     line-height: 36px;
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
 }
 .slide-desc{
-    position: absolute;
-    top: 65px;
-    left: 24px;
-    font-size: 18px;
-    line-height: 24px;
     margin: 0;
     padding: 0;
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .slide .btn-catalog{
-    position: absolute;
-    left: 25px;
-    bottom: 22px;
+    margin-top: 110px;
     min-width: 195px;
     padding-left: 49px;
     padding-right: 45px;
@@ -444,6 +462,46 @@ body{
     position: relative;
 }
 
+.catalog-item-btn{
+    margin-bottom: 7px;
+    padding-right: 45px;
+    padding-left: 49px;
+}
+
+.catalog-item-buy{
+    color: #ffffff;
+    background-color: #63a63e;
+    box-shadow: inset 0px -3px 0px 0px #367315;
+}
+
+.catalog-item-buy:hover{
+    outline: none;
+    background-color: #5fbb2d;
+}
+
+.catalog-item-buy:active{
+    outline: none;
+    background-color: #518534;
+}
+
+.catalog-item-bookmark{
+    padding: 7px 29px 7px 33px;
+    border: 3px solid #63a63e;
+    color: #32425c;
+    background-color: #ffffff;
+}
+
+.catalog-item-bookmark:hover{
+    outline: none;
+    border-color: #32425c;
+}
+
+.catalog-item-bookmark:active{
+    outline: none;
+    color: rgba(50, 66, 92, 0.3);
+    border-color: rgba(50, 66, 92, 0.3);
+}
+
 .catalog-item-img{
     position: absolute;
 }
@@ -451,8 +509,12 @@ body{
 .catalog-item-actions{
     display: none;
     position: absolute;
-    top:44px;
+    top: 0;
+    width: 100%;
     flex-direction: column;
+    align-items: center;
+    padding-top: 44px;
+    background-color: #ffffff;
 }
 
 .catalog-item-title{
@@ -478,14 +540,20 @@ body{
 }
 
 .catalog-item-price{
+    position: absolute;
+    bottom: 21px;
     padding-left: 35px;
-    padding-right: 18px;
+    padding-right: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #ee3643;
 }
 
 .catalog-item-price::after{
     content: "";
-    position: relative;
-    left: 35px;
+    position: absolute;
+    top: 0;
+    right: -19px;
     border: 19px solid #ee3643;
     border-right-width: 0;
     border-top-color: transparent;
@@ -497,16 +565,6 @@ body{
     bottom: 10px;
     text-decoration: line-through;
     color: #a9a9a9;
-}
-
-.catalog-item .btn{
-    position: absolute;
-    bottom: 21px;
-    padding-right: 20px;
-    padding-left: 36px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    background-color: #ee3643;
 }
 
 .vendor-item{
@@ -562,23 +620,23 @@ body{
 
 .service-container{
     display: flex;
-    min-height: 522px;
+    position: relative;
 }
 
 .service-items{
     display: flex;
     flex-direction: column;
     margin: 0;
+    margin-top: 70px;
+    margin-bottom: 102px;
     padding: 0;
-    width: 240px;
     list-style: none;
     margin-right: 80px;
 }
 
 .service-item{
-    min-height: 61px;
-    padding-top: 20px;
-    padding-left: 22px;
+    min-width: 240px;
+    padding: 15px 0px 15px 23px;
     font-size: 21px;
     line-height: 30px;
     font-weight: 700;
@@ -594,6 +652,7 @@ body{
 .service-item.active{
     background-color: #ffffff;
     color: #32425c;
+    box-shadow: none;
 }
 
 .service-title{
@@ -601,36 +660,58 @@ body{
     font-size: 36px;
     line-height: 36px;
     margin: 0;
+    margin-top: 70px;
     padding: 0;
     text-transform: uppercase;
     color: #32425c;
 }
 
 .service-desc{
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
     font-size: 13px;
     line-height: 24px;
     color: #000000;
 }
 
+.service-delivery,
+.service-guarantee,
+.service-credit{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top 0px right 0px;
+}
+
 .service-delivery{
     background-image: url("../img/delivery.png");
-    background-repeat: no-repeat;
-    background-position: right 0 bottom 0;
+    background-size: 468px 261px;
 }
 
 .service-guarantee{
     background-image: url("../img/guarantee.png");
-    background-repeat: no-repeat;
+    background-size: 389px 283px;
 }
 
 .service-credit{
     background-image: url("../img/credit.png");
-    background-repeat: no-repeat;
+    background-size: 465px 285px;
+}
+
+.service-credit-btn{
+    margin-top: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
+    color: #ffffff;
+    background-color: #ff5357;
 }
 
 .about-services{
-    flex-grow: 1;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 320px;
+    width: 620px;
+    height: 100%;
 }
 
 .about-us{
@@ -681,6 +762,7 @@ body{
 
 .delivery-company-item{
     margin-bottom: 22px;
+    padding-left: 35px;
     font-size: 18px;
     line-height: 20px;
 }
@@ -786,18 +868,17 @@ footer .address{
 
 .aside-header,
 .section-header{
-    min-height: 38px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     background-color: #f7f3ec;
 }
 
-.aside-header h2,
-.section-header h2{
+.aside-header .aside-header-title,
+.section-header .section-header-title{
     margin: 0;
     margin-left: 18px;
-    padding: 0;
+    padding: 10px 0px;
     font-family: "PTSans";
     font-weight: normal;
     font-size: 13px;
@@ -873,7 +954,6 @@ footer .address{
 .sort-option-active{
     border:none;
 }
-
 
 .catalog-footer{
     min-height: 261px;
