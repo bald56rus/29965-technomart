@@ -173,6 +173,7 @@ body{
 
 .menu-items{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
     margin: 0;
