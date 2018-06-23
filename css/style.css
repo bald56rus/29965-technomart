@@ -185,7 +185,8 @@ body{
     flex-direction: column;
 }
 
-.contacts span{
+.contacts .phone,
+.contacts .address{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -463,16 +464,25 @@ body{
     background-color: #ba2732;
 }
 
-.btn-prev-slide{
+.slide-btn{
     position: absolute;
-    top: 114px;
-    left: 25px;
+    text-indent: -1000px;
+    width: 20px;
+    height: 40px;
 }
 
-.btn-next-slide{
-    position: absolute;
+.slide-prev-btn{
+    top: 114px;
+    left: 25px;
+    background-image: url("../img/icon-left.png");
+    background-repeat: no-repeat;
+}
+
+.slide-next-btn{
     top: 114px;
     right: 20px;
+    background-image: url("../img/icon-right.png");
+    background-repeat: no-repeat;
 }
 
 .popular .container{
