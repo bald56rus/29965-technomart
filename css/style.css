@@ -61,7 +61,6 @@ body{
 }
 
 .header-top{
-    height:42px;
     color:#ffffff;
     background-color: #293449;
 }
@@ -93,11 +92,28 @@ body{
     background-color: #ffffff;
 }
 
+.search-form-btn{
+    margin-left: 46px;
+    position: relative;
+    border: none;
+    background-color: transparent;
+}
+
+.search-form-btn::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -17px;
+    width: 17px;
+    height: 17px;
+    background-image: url("../img/icon-search.png");
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+}
+
 .checkout-btn{
-    padding: 12px 22px 13px 20px;
-    font-size: 17px;
+    padding: 12px 22px 12px 20px;
     text-transform: none;
-    color: #ffffff;
     background-color: #63a63e;
     border-radius: 0;
 }
@@ -136,6 +152,7 @@ body{
 
 .header-top .logo{    
     min-height: 47px;
+    margin-bottom: -5px;
 }
 
 .footer-top .logo{
@@ -162,11 +179,41 @@ body{
 
 .bookmark,
 .cart,
-.checkout{
+.checkout-btn{
     font-size: 17px;
     line-height: 18px;
     text-decoration: none;
     color: #ffffff;
+}
+
+.bookmark{
+    padding-left: 30px;
+    position: relative;
+}
+
+.bookmark::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    height: 16px;
+    background-image: url("../img/icon-bookmark.png");
+    background-repeat: no-repeat;
+}
+
+.cart{
+    padding-left: 30px;
+    position: relative;
+}
+
+.cart::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    height: 16px;
+    background-image: url("../img/cart-icon.png");
+    background-repeat: no-repeat;
 }
 
 .header-bottom-title{
@@ -201,14 +248,25 @@ body{
     align-items: flex-start;
 }
 
-.header-bottom .phone{
-    border: 3px solid #ffffff;
+.header-contacts .phone{
+    position: relative;
     padding-top: 13px;
     padding-bottom: 12px;
     margin-bottom: 10px;
     font-size: 21px;
     line-height: 21px;
     color: #ee3643;
+    border: 3px solid #ffffff;
+}
+
+.header-contacts .phone::before{
+    content: "";
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: 10px;
+    background-image: url("../img/icon-phone.png");
+    background-repeat: no-repeat;
 }
 
 .header-bottom .address{
@@ -295,9 +353,21 @@ body{
     color: #000000;
 }
 
-.user-navigation .btn-login{
+.user-navigation .login-btn{
+    position: relative;
     padding-right: 26px;
-    padding-left: 47px;    
+    padding-left: 47px;
+}
+
+.login-btn::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    top: 13px;
+    left: 13px;;
+    background-image: url("../img/icon-login.png");
+    background-repeat: no-repeat;
 }
 
 .site-navigation .menu-link:hover{
@@ -334,6 +404,18 @@ body{
     width: 300px;
     min-height: 123px;
     margin-bottom: 20px;
+    position: relative;
+}
+
+.promo-section.new::after{
+    content: "";
+    width: 60px;
+    height: 59px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../img/new-flag.png");
+    background-repeat: no-repeat;
 }
 
 .slider{
@@ -352,9 +434,7 @@ body{
 }
 
 .promo-section-btn{
-    min-width: 153px;
-    padding-left: 24px;
-    padding-right: 24px;
+    min-width: 135px;
     margin-top: 10px;
     margin-left: 25px;
     color: #ffffff;
@@ -381,11 +461,21 @@ body{
     background-color: #ffbf47;
 }
 
+.promo-section-material .promo-section-btn{
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
 .promo-section-tool{
     background-image: url("../img/drill.png");
     background-repeat: no-repeat;
     background-position: top 33px right 28px;
     background-color: #3bbce3;
+}
+
+.promo-section-tool .promo-section-btn{
+    padding-left: 26px;
+    padding-right: 26px;
 }
 
 .promo-section-equipment{
@@ -395,6 +485,11 @@ body{
     background-color: #dc91d8;
 }
 
+.promo-section-equipment .promo-section-btn{
+    padding-left: 30px;
+    padding-right: 30px;   
+}
+
 .promo-section-sale{
     background-image: url("../img/sale.png");
     background-repeat: no-repeat;
@@ -402,11 +497,21 @@ body{
     background-color: #8ed78f;
 }
 
+.promo-section-sale .promo-section-btn{
+    padding-left: 22px;
+    padding-right: 22px;   
+}
+
 .promo-section-delivery{
     background-image: url("../img/delivery-small.png");
     background-repeat: no-repeat;
     background-position: top 32px right 31px;
     background-color: #ffc047;
+}
+
+.promo-section-delivery .promo-section-btn{
+    padding-left: 36px;
+    padding-right: 36px;
 }
 
 .slide{
@@ -520,28 +625,43 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .catalog-item,
 .vendor-item{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     text-align: center;
     width: 220px;
     margin-bottom:20px;
     border: 1px solid #eaeaea;
 }
 
+.vendor-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;    
+}
+
 .catalog-item{
+    position: relative;
     padding-bottom: 21px;
 }
 
-.wrapper{
+.catalog-item.new::after{
+    content: "";
+    width: 60px;
+    height: 59px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../img/new-flag.png");
+    background-repeat: no-repeat;
+}
+
+.catalog-item-wrapper{
     position: relative;
     width: 100%;
     min-height: 150px;
@@ -591,24 +711,20 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
 }
 
 .catalog-item-actions{
+    display: none;
     position: absolute;
     top: 44px;
     left: 0;
-    z-index: -100;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     background-color: #ffffff;
 }
 
 .catalog-item-info{
     margin-top: 25px;
-    width: 160px;
     min-height: 75px;
+    padding: 0 20px;
 }
 
 .catalog-item-title{
@@ -634,6 +750,7 @@ body{
 .catalog-item-price{
     position: relative;
     margin-top:10px;
+    margin-left: -19px;
     padding-left: 35px;
     padding-right: 20px;
     border-top-right-radius: 0px;
@@ -664,11 +781,11 @@ body{
 }
 
 .catalog-item:hover .catalog-item-img{
-    z-index: -100;
+    display: none;
 }
 
 .catalog-item:hover .catalog-item-actions{
-    z-index: 100;
+    display: block;
 }
 
 .catalog-item:hover,
@@ -692,11 +809,8 @@ body{
     flex-direction: column;
 }
 
-.service-header{
-    padding-top: 68px;
-}
-
 .service-header-title{
+    margin-top: 68px;
     font-size: 30px;
     line-height: 30px;
     font-weight: normal;
@@ -848,6 +962,7 @@ body{
 }
 
 .delivery-company-item{
+    position: relative;
     margin-bottom: 22px;
     padding-left: 35px;
     font-size: 18px;
@@ -856,6 +971,19 @@ body{
 
 .delivery-company-item:last-of-type{
     margin-bottom: 0;
+}
+
+.delivery-company-item::before{
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-image: url("../img/marker-transport-company-item.png");
+    background-repeat: no-repeat;
+
+
 }
 
 .btn-details-us{
@@ -911,6 +1039,10 @@ footer .address{
     background-color: #ee3643;
 }
 
+.social-icon{
+    vertical-align: middle;
+}
+
 /*catalog.html*/
 
 .breadcrumb-items{
@@ -923,9 +1055,12 @@ footer .address{
 .breadcrumb-item{
     list-style: none;
     margin-right:40px;
+    position: relative;
 }
 
-.breadcrumb-item a{
+.breadcrumb-link{
+    display: inline-block;
+    vertical-align: middle;
     font-size: 13px;
     line-height: 18px;
     text-decoration: none;
@@ -933,6 +1068,39 @@ footer .address{
     color: #000000;
 }
 
+.breadcrumb-item::after{
+    content: "";
+    width: 8px;
+    height: 12px;
+    position: absolute;
+    top: 4px;
+    left: -24px;
+    background-image: url("../img/icon-right-small.png");
+    background-repeat: no-repeat;
+}
+
+.breadcrumb-item.first::before{
+    content: "";
+    width: 14px;
+    height: 12px;
+    position: absolute;
+    top: 4px;
+    background-image: url("../img/icon-home.png");
+    background-repeat: no-repeat;
+}
+
+.breadcrumb-item.first .breadcrumb-link{
+    font-size: 0;
+    padding-right: 24px;
+}
+
+.breadcrumb-item:first-of-type::after{
+    background-image: none;
+}
+
+.breadcrumb-item:last-of-type{
+    margin-right: 0;
+}
 
 .catalog-header{
     margin-bottom:20px;

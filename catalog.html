@@ -19,7 +19,7 @@
             </a>
           </div>
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <input type="submit" class="btn btn-search">
+            <button type="submit" class="search-form-btn"></button>
             <input type="search" class="search-form-input" placeholder="Поиск:" id="search">
             <label for="search" class="visually-hidden">Поиск по сайту</label>
           </form>
@@ -41,7 +41,7 @@
           Интернет-магазин строительных матералов
           <br>и инструментов для ремонта
         </h1>
-        <div class="contacts">
+        <div class="contacts header-contacts">
           <span class="phone">+7(812) 555-05-55</span>
           <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
@@ -83,17 +83,17 @@
     <div class="breadcrumbs">
       <div class="container">
         <ul class="breadcrumb-items">
-          <li class="breadcrumb-item">
-            <a href="#">Главная</a>
+          <li class="breadcrumb-item first">
+            <a class="breadcrumb-link" href="#">Главная</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="#">Каталог</a>
+            <a class="breadcrumb-link" href="#">Каталог</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="#">Инструмент</a>
+            <a class="breadcrumb-link" href="#">Инструмент</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="#">Перфораторы</a>
+            <a class="breadcrumb-link" href="#">Перфораторы</a>
           </li>
         </ul>
       </div>
@@ -173,7 +173,7 @@
         </div>
         <ul class="catalog-items">
           <li class="catalog-item">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg3000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 3000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -187,7 +187,7 @@
             <button type="button" class="btn catalog-item-price">15500 р.</button>
           </li>
           <li class="catalog-item">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg6000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 6000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -201,7 +201,7 @@
             <button type="button" class="btn catalog-item-price">25500 р.</button>
           </li>
           <li class="catalog-item new">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg2000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 2000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -214,7 +214,7 @@
             <button type="button" class="btn catalog-item-price">12500 р.</button>
           </li>
           <li class="catalog-item">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg3000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 3000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -228,7 +228,7 @@
             <button type="button" class="btn catalog-item-price">15500 р.</button>
           </li>
           <li class="catalog-item new">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg6000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 6000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -242,7 +242,7 @@
             <button type="button" class="btn catalog-item-price">25500 р.</button>
           </li>
           <li class="catalog-item">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg2000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 2000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -255,7 +255,7 @@
             <button type="button" class="btn catalog-item-price">12500 р.</button>
           </li>
           <li class="catalog-item new">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg3000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 3000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -269,7 +269,7 @@
             <button type="button" class="btn catalog-item-price">15500 р.</button>
           </li>
           <li class="catalog-item">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg6000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 6000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -282,8 +282,8 @@
             </div>
             <button type="button" class="btn catalog-item-price">25500 р.</button>
           </li>
-          <li class="catalog-item new">
-            <div class="wrapper">
+          <li class="catalog-item">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg2000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 2000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -381,17 +381,17 @@
         <ul class="socials">
           <li class="social-btn">
             <a class="social-btn-vk">
-              <img src="img/vk-icon.png" width="26" height="15" alt="VKontakte">
+              <img class="social-icon" src="img/vk-icon.png" width="26" height="15" alt="VKontakte">
             </a>
           </li>
           <li class="social-btn">
             <a class="social-btn-fb">
-              <img src="img/fb-icon.png" width="12" height="22" alt="Facebook">
+              <img class="social-icon" src="img/fb-icon.png" width="12" height="22" alt="Facebook">
             </a>
           </li>
           <li class="social-btn">
             <a class="social-btn-insta">
-              <img src="img/insta-icon.png" width="21" height="21" alt="Instagramm">
+              <img class="social-icon" src="img/insta-icon.png" width="21" height="21" alt="Instagramm">
             </a>
           </li>
         </ul>

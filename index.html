@@ -19,7 +19,7 @@
             </a>
           </div>
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <input type="submit" class="btn btn-search">
+            <button type="submit" class="search-form-btn"></button>
             <input type="search" class="search-form-input" placeholder="Поиск:" id="search">
             <label for="search" class="visually-hidden">Поиск по сайту</label>
           </form>
@@ -47,10 +47,10 @@
         </div>
         <ul class="user-navigation menu-items">
           <li class="menu-item">
-            <a class="menu-link btn btn-login" href="login">Войти</a>
+            <a class="menu-link btn login-btn" href="login">Войти</a>
           </li>
           <li class="menu-item">
-            <a class="menu-link btn btn-register" href="register">Регистрация</a>
+            <a class="menu-link btn register-btn" href="register">Регистрация</a>
           </li>
         </ul>
       </div>
@@ -85,7 +85,7 @@
     <div class="promo-sections">
       <div class="container">
         <ul class="promo-section-left">
-          <li class="promo-section promo-section-material">
+          <li class="promo-section promo-section-material new">
             <h2 class="promo-section-title">Материалы</h2>
             <a href="#" class="btn promo-section-btn">На любой вкус</a>
           </li>
@@ -142,7 +142,7 @@
         </div>
         <ul class="catalog-items">
           <li class="catalog-item">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg9000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 9000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -156,7 +156,7 @@
             <button type="button" class="btn catalog-item-price">25500 р.</button>
           </li>
           <li class="catalog-item">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg3000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 3000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -170,7 +170,7 @@
             <button type="button" class="btn catalog-item-price">15500 р.</button>
           </li>
           <li class="catalog-item">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg6000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 6000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -184,7 +184,7 @@
             <button type="button" class="btn catalog-item-price">25500 р.</button>
           </li>
           <li class="catalog-item new">
-            <div class="wrapper">
+            <div class="catalog-item-wrapper">
               <img class="catalog-item-img" src="img/bfg2000.jpg" width="218" height="150" alt="Перфоратор BOSCH BFG 2000">
               <div class="catalog-item-actions">
                 <button type="button" class="btn catalog-item-btn catalog-item-buy">Купить</button>
@@ -250,16 +250,12 @@
       </div>
     </div>
     <div class="service">
-      <div class="service-header">
-        <div class="container">
-          <h2 class="service-header-title">Сервисы</h2>
-          <p class="service-header-desc">
-            Хороший интернет-магазин отличается от плохого не толька ценами!
-            <br> Мы стараемся изо всех сил, что бы сделать ваши покупки приятнными.
-          </p>
-        </div>
-      </div>
       <div class="container">
+        <h2 class="service-header-title">Сервисы</h2>
+        <p class="service-header-desc">
+          Хороший интернет-магазин отличается от плохого не толька ценами!
+          <br> Мы стараемся изо всех сил, что бы сделать ваши покупки приятнными.
+        </p>
         <div class="service-container">
           <ul class="service-items">
             <li class="service-item active">Доставка</li>
@@ -386,17 +382,17 @@
         <ul class="socials">
           <li class="social-btn">
             <a class="social-btn-vk">
-              <img src="img/vk-icon.png" width="26" height="15" alt="VKontakte">
+              <img class="social-icon" src="img/vk-icon.png" width="26" height="15" alt="VKontakte">
             </a>
           </li>
           <li class="social-btn">
             <a class="social-btn-fb">
-              <img src="img/fb-icon.png" width="12" height="22" alt="Facebook">
+              <img class="social-icon" src="img/fb-icon.png" width="12" height="22" alt="Facebook">
             </a>
           </li>
           <li class="social-btn">
             <a class="social-btn-insta">
-              <img src="img/insta-icon.png" width="21" height="21" alt="Instagramm">
+              <img class="social-icon" src="img/insta-icon.png" width="21" height="21" alt="Instagramm">
             </a>
           </li>
         </ul>
