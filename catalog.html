@@ -12,27 +12,31 @@
   <header>
     <div class="header-top">
       <div class="container">
-        <div class="header-top-left">
-          <div class="logo">
-            <a href="index.html" class="brand">
-              <img src="img/logo.png" width="111" height="18" alt="Техномарт">
+        <div class="logo">
+          <a href="index.html" class="brand">
+            <img src="img/logo.png" width="111" height="18" alt="Техномарт">
+          </a>
+        </div>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <button type="submit" class="search-form-btn"></button>
+          <input type="search" class="search-form-input" placeholder="Поиск:" id="search">
+          <label for="search" class="visually-hidden" style="font-size: 0">Поиск по сайту</label>
+        </form>
+        <ul class="header-top-menu menu-items">
+          <li class="menu-item bookmark">
+            <a class="menu-link" href="bookmark">Закладки:
+              <span class="counter">0</span>
             </a>
-          </div>
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <button type="submit" class="search-form-btn"></button>
-            <input type="search" class="search-form-input" placeholder="Поиск:" id="search">
-            <label for="search" class="visually-hidden">Поиск по сайту</label>
-          </form>
-        </div>
-        <div class="header-top-right">
-          <a class="bookmark" href="bookmark">Закладки:
-            <span class="counter">0</span>
-          </a>
-          <a class="cart" href="cart">Корзина:
-            <span class="counter">0</span>
-          </a>
-          <a class="btn checkout-btn" href="#">Оформить заказ</a>
-        </div>
+          </li>
+          <li class="menu-item cart">
+            <a class="menu-link" href="cart">Корзина:
+              <span class="counter">0</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link checkout" href="#">Оформить заказ</a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="header-bottom">
@@ -46,10 +50,18 @@
           <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
         <div class="user-navigation">
-          <a href="user">Равшан Джамшутович</a>
-          <a href="logout" class="btn btn-logout">Выход</a>
-          <a href="orders">Мои заказы</a>
-          <a href="user">Личный кабинет</a>
+          <div class="user-profile">
+            <a href="user" class="user-name">Равшан Джамшутович</a>
+            <a href="logout" class="user-logout-btn">Выход</a>
+          </div>
+          <ul class="user-profile-menu">
+            <li class="menu-item">
+              <a href="orders" class="menu-link">Мои заказы</a>
+            </li>
+            <li class="menu-item">
+              <a href="user" class="menu-link">Личный кабинет</a>
+            </li>
+          </ul>
         </div>
       </div>
       <nav class="container site-navigation">
@@ -161,14 +173,24 @@
       <section class="catalog-section">
         <div class="section-header">
           <h2 class="section-header-title">Сортировка:</h2>
-          <ul class="catalog-sort-options">
-            <li class="sort-option sort-option-active">По цене</li>
-            <li class="sort-option">По типу</li>
-            <li class="sort-option">По функционалу</li>
+          <ul class="menu-sort menu-sort-options">
+            <li class="sort-option sort-option-active">
+              <a href="" class="menu-sort-link">По цене</a>
+            </li>
+            <li class="sort-option">
+              <a href="" class="menu-sort-link">По типу</a>
+            </li>
+            <li class="sort-option">
+              <a href="" class="menu-sort-link">По функционалу</a>
+            </li>
           </ul>
-          <ul class="catalog-sort-orders">
-            <li class="sort-order sort-order-asc sort-order-active"></li>
-            <li class="sort-order sort-order-desc"></li>
+          <ul class="menu-sort menu-sort-orders">
+            <li class="sort-order sort-order-active">
+              <a href="" class="sort-order-asc">По возростанию</a>
+            </li>
+            <li class="sort-order">
+              <a href="" class="sort-order-desc">По убыванию</a>
+            </li>
           </ul>
         </div>
         <ul class="catalog-items">
@@ -380,17 +402,17 @@
         </p>
         <ul class="socials">
           <li class="social-btn">
-            <a class="social-btn-vk">
+            <a class="social-btn-vk" href="#">
               <img class="social-icon" src="img/vk-icon.png" width="26" height="15" alt="VKontakte">
             </a>
           </li>
           <li class="social-btn">
-            <a class="social-btn-fb">
+            <a class="social-btn-fb" href="#">
               <img class="social-icon" src="img/fb-icon.png" width="12" height="22" alt="Facebook">
             </a>
           </li>
           <li class="social-btn">
-            <a class="social-btn-insta">
+            <a class="social-btn-insta" href="#">
               <img class="social-icon" src="img/insta-icon.png" width="21" height="21" alt="Instagramm">
             </a>
           </li>

@@ -12,27 +12,31 @@
   <header>
     <div class="header-top">
       <div class="container">
-        <div class="header-top-left">
-          <div class="logo">
-            <a href="#" class="brand">
-              <img src="img/logo.png" width="111" height="18" alt="Техномарт">
+        <div class="logo">
+          <a href="index.html" class="brand">
+            <img src="img/logo.png" width="111" height="18" alt="Техномарт">
+          </a>
+        </div>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <button type="submit" class="search-form-btn"></button>
+          <input type="search" class="search-form-input" placeholder="Поиск:" id="search">
+          <label for="search" class="visually-hidden" style="font-size: 0">Поиск по сайту</label>
+        </form>
+        <ul class="header-top-menu menu-items">
+          <li class="menu-item bookmark">
+            <a class="menu-link" href="bookmark">Закладки:
+              <span class="counter">0</span>
             </a>
-          </div>
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <button type="submit" class="search-form-btn"></button>
-            <input type="search" class="search-form-input" placeholder="Поиск:" id="search">
-            <label for="search" class="visually-hidden">Поиск по сайту</label>
-          </form>
-        </div>
-        <div class="header-top-right">
-          <a class="bookmark" href="bookmark">Закладки:
-            <span class="counter">0</span>
-          </a>
-          <a class="cart" href="cart">Корзина:
-            <span class="counter">0</span>
-          </a>
-          <a class="btn checkout-btn" href="#">Оформить заказ</a>
-        </div>
+          </li>
+          <li class="menu-item cart">
+            <a class="menu-link" href="cart">Корзина:
+              <span class="counter">0</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link checkout" href="#">Оформить заказ</a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="header-bottom">
@@ -113,8 +117,8 @@
               </li>
             </ul>
             <div class="slider-controls">
-              <a class="slide-btn slide-prev-btn">Предыдущий слайд</a>
-              <a class="slide-btn slide-next-btn">Следующий слайд</a>
+              <a href="#" class="slide-btn slide-prev-btn">Предыдущий слайд</a>
+              <a href="#" class="slide-btn slide-next-btn">Следующий слайд</a>
             </div>
           </li>
         </ul>
@@ -381,17 +385,17 @@
         </p>
         <ul class="socials">
           <li class="social-btn">
-            <a class="social-btn-vk">
+            <a class="social-btn-vk" href="#">
               <img class="social-icon" src="img/vk-icon.png" width="26" height="15" alt="VKontakte">
             </a>
           </li>
           <li class="social-btn">
-            <a class="social-btn-fb">
+            <a class="social-btn-fb" href="#">
               <img class="social-icon" src="img/fb-icon.png" width="12" height="22" alt="Facebook">
             </a>
           </li>
           <li class="social-btn">
-            <a class="social-btn-insta">
+            <a class="social-btn-insta" href="#">
               <img class="social-icon" src="img/insta-icon.png" width="21" height="21" alt="Instagramm">
             </a>
           </li>
