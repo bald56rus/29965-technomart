@@ -51,8 +51,21 @@
         </div>
         <div class="user-navigation">
           <div class="user-profile">
-            <a href="user" class="user-name">Равшан Джамшутович</a>
-            <a href="logout" class="user-logout-btn">Выход</a>
+            <a href="user" class="user-name">
+              <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewbox="0 0 20 18">
+                <path  d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
+              </svg>
+              Равшан Джамшутович
+            </a>
+            <a href="logout" class="user-logout-btn">
+              <svg class="icon-logout" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewbox="0 0 21 17">
+                <g>
+                  <path  d="M21 8.5L12.125 0v6h-6v5h6v6z"/>
+                  <path  d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/>
+                </g>
+              </svg>
+              Выход
+            </a>
           </div>
           <ul class="user-profile-menu">
             <li class="menu-item">
@@ -121,53 +134,58 @@
           <h2 class="aside-header-title">Фильтр:</h2>
         </div>
         <form class="form-filter" method="GET" action="https://echo.htmlacademy.ru" name="Фильтр">
-          <fieldset>
-            <legend>Цена:</legend>
-            <input type="range" min="0" max="30000">
-            <span>0</span>
-            <span>30</span>
+          <fieldset class="form-group">
+            <legend class="form-group-title">Цена:</legend>
+            <svg width="220px" height="80px">
+              <rect width="100%" height="100%" fill="#f7f3ec"/>
+              <line x1="20px" x2="200" y1="39px" y2="41px" stroke="#d7dcde"/>
+              <line x1="20px" x2="158" y1="39px" y2="41px" stroke="#00ca74"/>
+            </svg>
+            <div class="price-range-filter">
+                <span class="btn price-range price-range-min">0</span>
+                <span>-</span>
+                <span class="btn price-range price-range-max">30000</span>
+            </div>            
           </fieldset>
-          <hr>
-          <fieldset>
-            <legend>Производители:</legend>
-            <ul class="filter-vendor-options">
+          <fieldset class="form-group">
+            <legend class="form-group-title">Производители:</legend>
+            <ul class="filter-options">
               <li class="filter-option">
-                <input type="checkbox" class="visually-hidden filter-checkbox" name="Bosch" value="Bosch" id="filter-vendor-bosch">
-                <label for="filter-vendor-bosch">Bosch</label>
+                <input type="checkbox" class="visually-hidden" name="Bosch" value="Bosch" id="filter-vendor-bosch" checked>
+                <label class="filter-checkbox" for="filter-vendor-bosch">Bosch</label>
               </li>
               <li class="filter-option">
-                <input type="checkbox" class="visually-hidden filter-checkbox" name="Interskol" value="Interskol" id="filter-vendor-interskol">
-                <label for="filter-vendor-interskol">Интерскол</label>
+                <input type="checkbox" class="visually-hidden" name="Interskol" value="Interskol" id="filter-vendor-interskol">
+                <label class="filter-checkbox" for="filter-vendor-interskol">Интерскол</label>
               </li>
               <li class="filter-option">
-                <input type="checkbox" class="visually-hidden filter-checkbox" name="Makita" value="Makita" id="filter-vendor-makita">
-                <label for="filter-vendor-makita">Makita</label>
+                <input type="checkbox" class="visually-hidden" name="Makita" value="Makita" id="filter-vendor-makita" checked>
+                <label class="filter-checkbox" for="filter-vendor-makita">Makita</label>
               </li>
               <li class="filter-option">
-                <input type="checkbox" class="visually-hidden filter-checkbox" name="Dewalt" value="Dewalt" id="filter-vendor-dewalt">
-                <label for="filter-vendor-dewalt">Dewalt</label>
+                <input type="checkbox" class="visually-hidden" name="Dewalt" value="Dewalt" id="filter-vendor-dewalt">
+                <label class="filter-checkbox" for="filter-vendor-dewalt">Dewalt</label>
               </li>
               <li class="filter-option">
-                <input type="checkbox" class="visually-hidden filter-checkbox" name="Hitachi" value="Hitachi" id="filter-vendor-hitachi">
-                <label for="filter-vendor-hitachi">Hitachi</label>
+                <input type="checkbox" class="visually-hidden" name="Hitachi" value="Hitachi" id="filter-vendor-hitachi">
+                <label class="filter-checkbox" for="filter-vendor-hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
-          <hr>
-          <fieldset>
-            <legend>Питание:</legend>
-            <ul class="filter-power-options">
+          <fieldset class="form-group">
+            <legend class="form-group-title">Питание:</legend>
+            <ul class="filter-options">
               <li class="filter-option">
-                <input type="radio" class="visually-hidden filter-radio" name="power" value="battery" id="filter-power-battery">
-                <label for="filter-power-battery">Аккумуляторные</label>
+                <input type="radio" class="visually-hidden" name="power" value="battery" id="filter-power-battery" checked>
+                <label class="filter-radio" for="filter-power-battery">Аккумуляторные</label>
               </li>
               <li class="filter-option">
-                <input type="radio" class="visually-hidden filter-radio" name="power" value="network" id="filter-power-network">
-                <label for="filter-power-network">Сетевые</label>
+                <input type="radio" class="visually-hidden" name="power" value="network" id="filter-power-network">
+                <label class="filter-radio" for="filter-power-network">Сетевые</label>
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="btn btn-apply-filter">Показать</button>
+          <button type="submit" class="btn form-filter-btn">Показать</button>
         </form>
       </aside>
       <section class="catalog-section">
@@ -378,7 +396,7 @@
           <span class="phone">+7(812) 555-05-55</span>
           <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
-        <ul class="menu-items">
+        <ul class="menu-items menu-sections">
           <li class="menu-item">
             <a class="menu-link" href="#">Материалы</a>
           </li>
@@ -403,30 +421,32 @@
         <ul class="socials">
           <li class="social-btn">
             <a class="social-btn-vk" href="#">
-              <img class="social-icon" src="img/vk-icon.png" width="26" height="15" alt="VKontakte">
+              <img class="social-icon" src="img/icon-vk.svg" width="26" height="15" alt="VKontakte">
             </a>
           </li>
           <li class="social-btn">
             <a class="social-btn-fb" href="#">
-              <img class="social-icon" src="img/fb-icon.png" width="12" height="22" alt="Facebook">
+              <img class="social-icon" src="img/icon-fb.svg" width="12" height="22" alt="Facebook">
             </a>
           </li>
           <li class="social-btn">
             <a class="social-btn-insta" href="#">
-              <img class="social-icon" src="img/insta-icon.png" width="21" height="21" alt="Instagramm">
+              <img class="social-icon" src="img/icon-insta.svg" width="21" height="21" alt="Instagramm">
             </a>
           </li>
         </ul>
-        <div class="footer-bottom-right">
-          <div class="feedback">
-            <span class="title">Обратная связь:</span>
-            <span>mail@htmlacademy.ru</span>
-          </div>
-          <div class="site-developing">
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
-              <span>Разработано-</span>htmlacademy.ru</a>
-          </div>
-        </div>
+        <ul class="footer-bottom-menu">
+          <li class="bottom-menu-item">
+            Обратная связь:
+            <br>
+            <a href="#" class="menu-link">mail@htmlacademy.ru</a>
+          </li>
+          <li class="bottom-menu-item">
+            Разработано-
+            <br>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="menu-link">htmlacademy.ru</a>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
@@ -435,7 +455,7 @@
       <button type="button" class="btn btn-close">Закрыть</button>
     </div>
     <form class="modal-body" action="https://echo.htmlacademy.ru" method="get">
-      <img src="img/added.png" alt="">
+      <img src="img/icon-mark.svg" alt="">
       <span>Товар добавлен в корзину</span>
     </form>
     <div class="modal-footer">
