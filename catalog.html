@@ -111,24 +111,22 @@
       </nav>
     </div>
   </header>
-  <main>
-    <div class="breadcrumbs">
-      <div class="container">
-        <ul class="breadcrumb-items">
-          <li class="breadcrumb-item first">
-            <a class="breadcrumb-link" href="#">Главная</a>
-          </li>
-          <li class="breadcrumb-item">
-            <a class="breadcrumb-link" href="#">Каталог</a>
-          </li>
-          <li class="breadcrumb-item">
-            <a class="breadcrumb-link" href="#">Инструмент</a>
-          </li>
-          <li class="breadcrumb-item">
-            <a class="breadcrumb-link" href="#">Перфораторы</a>
-          </li>
-        </ul>
-      </div>
+  <main>    
+    <div class="container">
+      <ul class="breadcrumb-items">
+        <li class="breadcrumb-item first">
+          <a class="breadcrumb-link" href="#">Главная</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-link" href="#">Каталог</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-link" href="#">Инструмент</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-link" href="#">Перфораторы</a>
+        </li>
+      </ul>
     </div>
     <div class="catalog-header">
       <div class="container">
@@ -143,18 +141,19 @@
         <form class="form-filter" method="GET" action="https://echo.htmlacademy.ru" name="Фильтр">
           <fieldset class="form-group">
             <legend class="form-group-title">Цена:</legend>
-            <svg width="220px" height="80px">
-              <rect width="100%" height="100%" fill="#f7f3ec" />
-              <line x1="20px" x2="200" y1="39px" y2="41px" stroke="#d7dcde" />
-              <line x1="20px" x2="158" y1="39px" y2="41px" stroke="#00ca74" />
-            </svg>
-            <div class="price-range-filter">
-              <span class="btn price-range price-range-min">0</span>
-              <span>-</span>
-              <span class="btn price-range price-range-max">30000</span>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <div class="range-controls-output">              
+              <input type="text" class="min-price" value="0">&ndash;
+              <input type="text" class="max-price" value="30000">
             </div>
           </fieldset>
-          <fieldset class="form-group">
+          <fieldset class="form-group form-group-vendors">
             <legend class="form-group-title">Производители:</legend>
             <ul class="filter-options">
               <li class="filter-option">
@@ -179,7 +178,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-group">
+          <fieldset class="form-group form-group-power">
             <legend class="form-group-title">Питание:</legend>
             <ul class="filter-options">
               <li class="filter-option">
@@ -363,8 +362,8 @@
       <div class="container">
         <h2 class="catalog-footer-title">Пара слов о перфораторах</h2>
         <p class="catalog-footer-desc">
-          Перфоратор &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и
-          камне.
+          Перфоратор &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне
+          и камне.
           <br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
           шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены
           отбойный молоток и ударная дрель.
