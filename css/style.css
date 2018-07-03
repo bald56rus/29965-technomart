@@ -371,19 +371,27 @@ body{
 .footer-bottom-menu{
     margin: 0;
     margin-top: 15px;
-    margin-right: 17px;
+    margin-right: 14px;
     display: flex;
     list-style: none;
 }
 
 .footer-bottom-menu .bottom-menu-item{
-    margin-left: 51px;
+    margin-left: 48px;
     color: #ffffff;
 }
 
 .footer-bottom-menu .menu-link{
     text-decoration: none;
     color: #ffd180;
+}
+
+.footer-bottom-menu .bottom-menu-item:nth-of-type(1){
+    width: 140px;
+}
+
+.footer-bottom-menu .bottom-menu-item:nth-of-type(2){
+    width: 100px;
 }
 
 .bottom-menu-item:hover .menu-link{
@@ -937,6 +945,8 @@ body{
 
 .service-header-desc{
     margin: 0;
+    padding-top: 2px;
+    padding-right: 530px;
     font-family: "PTSans";
     font-size: 13px;
     line-height: 24px;
@@ -945,7 +955,7 @@ body{
 
 .service-container{
     display: flex;
-    padding-top: 36px;
+    padding-top: 67px;
 }
 
 .service-items{
@@ -1015,6 +1025,18 @@ body{
     background-size: 468px 261px;
 }
 
+.service-delivery .service-desc:nth-of-type(1){
+    padding-right: 340px;
+}
+
+.service-delivery .service-desc:nth-of-type(2){
+    padding-right: 400px;
+}
+
+.service-credit .service-desc{
+    padding-right: 340px;
+}
+
 .service-guarantee{
     background-image: url("../img/guarantee.png");
     background-size: 389px 283px;
@@ -1066,6 +1088,18 @@ body{
     line-height: 24px;
 }
 
+.about-us-details .about-us-desc:nth-of-type(1){
+    padding-right: 60px;    
+}
+
+.about-us-details .about-us-desc:nth-of-type(2){
+    padding-right: 200px;
+}
+
+.about-us-contacts .about-us-desc{
+    padding-right: 90px;
+}
+
 .about-us .btn{
     padding-left: 40px;
     padding-right: 40px;
@@ -1073,7 +1107,7 @@ body{
     background-color: #ee3643;
 }
 
-.details-us-btn{
+.about-us-btn{
     margin-top: 37px;
 }
 
@@ -1130,6 +1164,7 @@ body{
 }
 
 .copyright{
+    width: 230px;
     font-size: 16px;
     line-height: 18px;
 }
@@ -1652,10 +1687,13 @@ input[type="radio"]:checked ~ .filter-radio::before{
 
 .catalog-footer-desc{
     margin: 0;
-    margin-top: 27px;
     width: 850px;
     font-size: 13px;
     line-height: 24px;
+}
+
+.catalog-footer-desc:first-of-type{
+    margin-top: 27px;
 }
 
 .catalog-footer-title,
