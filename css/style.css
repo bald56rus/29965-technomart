@@ -306,7 +306,7 @@ body{
 }
 
 .header-bottom .address{
-    padding-top: 3px;
+    padding-top: 5px;
     font-size: 14px;
     line-height: 24px;
     color: #32425c;
@@ -408,7 +408,7 @@ body{
 }
 
 .site-navigation{
-    margin-top: 40px;
+    margin-top: 38px;
     margin-bottom: 60px;
 }
 
@@ -1333,7 +1333,6 @@ footer .address{
 .aside-header,
 .section-header{
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     background-color: #f7f3ec;
 }
@@ -1346,7 +1345,6 @@ footer .address{
 .section-header .section-header-title{
     margin: 0;
     margin-left: 18px;
-    margin-right: auto;
     padding: 10px 0px;
     font-family: "PTSans";
     font-weight: normal;
@@ -1549,11 +1547,11 @@ input[type="radio"]:checked ~ .filter-radio::before{
 }
 
 .menu-sort-options{
-    margin-right: 46px;
+    margin-left: 141px;
 }
 
 .menu-sort-orders{
-    margin-right: -8px;
+    margin-left: 46px;
 }
 
 .menu-sort .menu-sort-link{
@@ -1580,7 +1578,8 @@ input[type="radio"]:checked ~ .filter-radio::before{
     border-bottom: 1px solid #ee3643;
 }
 
-.sort-option:last-of-type{
+.sort-option:last-of-type,
+.sort-order:last-of-type{
     margin-right: 0;
 }
 
