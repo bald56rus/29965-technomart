@@ -683,10 +683,6 @@ body{
     margin-top: 32px;
 }
 
-.popular-articles .popular-header-title{
-    margin-left: 3px;
-}
-
 .popular-header{
     display: flex;
     justify-content: space-between;
@@ -705,6 +701,14 @@ body{
     font-weight: 500;
     text-transform: uppercase;
     color: #32425c;
+}
+
+.popular-articles .popular-header-title{
+    margin-left: 3px;
+}
+
+.popular-vendors .popular-header-title{
+    padding-top: 27px;
 }
 
 .popular-header-btn{
@@ -743,7 +747,7 @@ body{
 
 .catalog-item{
     position: relative;
-    padding-bottom: 21px;
+    padding-bottom: 19px;
 }
 
 .catalog-item.new::after{
@@ -1110,7 +1114,7 @@ body{
 
 .footer-bottom{
     padding-top:22px;
-    padding-bottom: 12px;
+    padding-bottom: 18px;
     padding-left: 6px;
     background-color: #293449;
 }
@@ -1319,6 +1323,7 @@ footer .address{
 .aside-header,
 .section-header{
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 20px;
     background-color: #f7f3ec;
@@ -1328,6 +1333,7 @@ footer .address{
 .section-header .section-header-title{
     margin: 0;
     margin-left: 18px;
+    margin-right: auto;
     padding: 10px 0px;
     font-family: "PTSans";
     font-weight: normal;
@@ -1462,11 +1468,11 @@ input[type="radio"]:checked ~ .filter-radio::before{
 }
 
 .menu-sort-options{
-    margin-left: 140px;
+    margin-right: 46px;
 }
 
 .menu-sort-orders{
-    margin-left: 45px;
+    margin-right: -8px;
 }
 
 .menu-sort .menu-sort-link{
@@ -1476,27 +1482,21 @@ input[type="radio"]:checked ~ .filter-radio::before{
     text-decoration: none;
     text-transform: uppercase;
     color: rgba(0,0,0,0.3);
-}
-
-.sort-option{
-    margin-right: 60px;
     border-bottom: 1px dotted #ee3643;
 }
 
-.sort-option-active{
-    border: none;
+.sort-option{
+    margin-right: 68px;    
 }
 
 .sort-option-active .menu-sort-link{
     color: #ee3643;
-}
-
-.sort-option:hover{
-    border-bottom: 1px solid #ee3643;
+    border: none;
 }
 
 .sort-option:hover .menu-sort-link{
     color: #000000;
+    border-bottom: 1px solid #ee3643;
 }
 
 .sort-option:last-of-type{
@@ -1504,7 +1504,7 @@ input[type="radio"]:checked ~ .filter-radio::before{
 }
 
 .sort-order{
-    margin-right: 35px;
+    margin-right: 34px;
     position: relative;
 }
 
@@ -1518,17 +1518,17 @@ input[type="radio"]:checked ~ .filter-radio::before{
     top: 4px;
     width: 0;
 	height: 0;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 12px solid #c5c5c5;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #c5c5c5;
 }
 
 .sort-order-asc:hover::before{
-    border-top: 12px solid #000000;
+    border-bottom: 10px solid #000000;
 }
 
 .sort-order-active .sort-order-asc::before{
-    border-top: 12px solid #ee3643;
+    border-bottom: 10px solid #ee3643;
 }
 
 .sort-order-desc::before{
@@ -1537,17 +1537,17 @@ input[type="radio"]:checked ~ .filter-radio::before{
     top: 4px;
     width: 0;
 	height: 0;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-bottom: 12px solid #c5c5c5;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #c5c5c5;
 }
 
 .sort-order-desc:hover::before{
-    border-bottom: 12px solid #000000;
+    border-top: 10px solid #000000;
 }
 
 .sort-order-active .sort-order-desc::before{
-    border-bottom: 12px solid #ee3643;
+    border-top: 10px solid #ee3643;
 }
 
 .catalog-footer{
@@ -1561,14 +1561,18 @@ input[type="radio"]:checked ~ .filter-radio::before{
 }
 
 .catalog-footer-title{
-    margin-top: 68px;
+    margin: 0;
+    margin-top: 65px;
     font-weight: normal;
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
+    letter-spacing: 0.2px;
 }
 
 .catalog-footer-desc{
+    margin: 0;
+    margin-top: 27px;
     width: 850px;
     font-size: 13px;
     line-height: 24px;
@@ -1583,7 +1587,7 @@ input[type="radio"]:checked ~ .filter-radio::before{
     display:flex;
     margin: 0;
     padding: 0;
-    margin-top:52px;
+    margin-top:32px;
 }
 
 .pagination-item{
@@ -1594,8 +1598,13 @@ input[type="radio"]:checked ~ .filter-radio::before{
 .pagination-btn{
     min-width:38px;
     min-height: 38px;
+    text-transform: uppercase;
     border: 1px solid #e5e5e5;
     background-color: #ffffff;
+}
+
+.pagination-next-btn{
+ padding: 0px 30px;
 }
 
 .pagination-btn:hover{
@@ -1607,7 +1616,7 @@ input[type="radio"]:checked ~ .filter-radio::before{
     border: 1px solid #ee3643;
 }
 
-.pagination-btn-current{
+.pagination-current-btn{
     color: #ffffff;
     background-color: #ee3643;
 }
