@@ -640,7 +640,6 @@ body{
     position: relative;
     width: 620px;
     height: 266px;
-    z-index: -100px;
 }
 
 .slide-content{
