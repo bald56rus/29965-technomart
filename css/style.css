@@ -724,6 +724,10 @@ body{
     list-style: none;
 }
 
+.slide-toggle input[type="radio"]{
+    display: none;
+}
+
 .slide-toggle-item{
     position: relative;
     margin-right: 20px;
@@ -740,7 +744,7 @@ body{
     background-repeat: no-repeat;
 }
 
-input[type="radio"]:checked ~ .slide-toggle-item::before{
+.slide-toggle-input:checked ~ .slide-toggle-item::before{
     background-image: url("../img/slide-toggle-on.svg");
 }
 
@@ -858,8 +862,6 @@ input[type="radio"]:checked ~ .slide-toggle-item::before{
     outline: none;
     background-color: #518534;
 }
-
-
 
 .catalog-item-bookmark{
     padding: 7px 29px 7px 33px;
@@ -1364,7 +1366,7 @@ footer .address{
 }
 
 .breadcrumb-item{
-    margin-right:40px;
+    margin-right: 40px;
     position: relative;
 }
 
@@ -1599,8 +1601,8 @@ footer .address{
     color: #000000;
 }
 
-input[type="checkbox"],
-input[type="radio"]{
+.form-filter input[type="checkbox"],
+.form-filter input[type="radio"]{
     display:none;
 }
 
@@ -1644,11 +1646,11 @@ input[type="radio"]{
     background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:checked ~ .filter-checkbox::before{
+.filter-input-checkbox:checked ~ .filter-checkbox::before{
     background-image: url("../img/checkbox-on.svg");
 }
 
-input[type="radio"]:checked ~ .filter-radio::before{
+.filter-input-radio:checked ~ .filter-radio::before{
     background-image: url("../img/radio-on.svg");
 }
 
