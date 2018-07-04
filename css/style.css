@@ -1803,3 +1803,107 @@ input[type="radio"]:checked ~ .filter-radio::before{
     color: #ffffff;
     background-color: #ee3643;
 }
+
+/*modals*/
+.modal{
+    position: fixed;
+    background-color: #ffffff;
+}
+
+.modal-close-btn{
+    font-size: 0;    
+}
+
+.modal-close-btn::before{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-close.svg");
+    background-repeat: no-repeat;
+}
+
+.feedback-modal{
+    display: none;
+    width: 620px;
+    bottom: 210px;
+    left: 50%;
+    margin-left: -310px;
+    min-height: 100px;
+    box-shadow:
+        0 0 40px 0 rgba(0,0,0, 0.75),
+        inset 0 5px 0 0 #ff5357;;
+}
+
+.feedback-modal-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+.feedback-modal .feedback-group{
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    padding-top: 10px;
+    border: none;
+}
+
+.feedback-modal .feedback-group-title{
+    font-family: "Cuprum";
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.feedback-modal input{
+    width: 220px;
+}
+
+.feedback-modal textarea{
+    width: 460px;
+    resize: none;
+}
+
+.feedback-modal input,
+.feedback-modal textarea{
+    padding: 10px;
+    border: 2px solid #dee3e4;
+    border-radius: 3px;
+}
+
+.feedback-modal input::placeholder,
+.feedback-modal textarea::placeholder{
+    font-family: "Cuprum";
+    font-size: 13px;
+    line-height: 18px;
+    color: #a9a9a9;
+}
+
+.feedback-modal input::-ms-input-placeholder,
+.feedback-modal textarea::-ms-input-placeholder{
+    font-family: "Cuprum";
+    font-size: 13px;
+    line-height: 18px;
+    color: #a9a9a9;
+}
+
+.feedback-modal-footer{
+    margin-top: 37px;
+    padding: 37px 80px;
+    background-color: #f4f4f4;
+}
+
+.feedback-send-btn{
+    font-family: "Cuprum";
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding: 10px 200px 10px 200px;
+    color: #ffffff;
+    background-color: #ee3643;
+    border: none;
+    border-radius: 3px;
+}

@@ -343,6 +343,28 @@
             <img class="about-us-map" src="img/map-small.jpg" width="300" height="158" alt="Большая Конюшенная ул., 19">
           </a>
           <button type="button" class="btn write-us-btn">Заблудились? Напишите нам</button>
+          <div class="modal feedback-modal">
+            <a href="#" class="modal-close-btn">Закрыть окно</a>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <div class="feedback-modal-body">
+                <fieldset class="feedback-group">
+                  <legend class="feedback-group-title">Ваше имя:</legend>
+                  <input type="text" name="feedback-name" placeholder="Имя Фамилия">
+                </fieldset>
+                <fieldset class="feedback-group">
+                  <legend class="feedback-group-title">Ваш e-mail:</legend>
+                  <input type="text" name="feedback-email" placeholder="email@example.com">
+                </fieldset>
+                <fieldset class="feedback-group">
+                  <legend class="feedback-group-title">Текст письма:</legend>
+                  <textarea rows="5" name="feedback-description" placeholder="В свободной форме"></textarea>
+                </fieldset>
+              </div>
+              <div class="feedback-modal-footer">
+                <button type="submit" class="feedback-send-btn">Отправить</button>
+              </div>
+            </form>
+          </div>
         </aside>
       </div>
     </div>
@@ -429,28 +451,6 @@
       </div>
     </div>
   </footer>
-  <div class="modal write-us" style="display: none;">
-    <div class="modal-header">
-      <button type="button" class="btn btn-close">Закрыть окно</button>
-    </div>
-    <form action="https://echo.htmlacademy.ru" method="GET" class="modal-body">
-      <div>
-        <label for="feedback-form-name">Ваше имя:</label>
-        <input type="text" id="feedback-form-name" placeholder="Имя Фамилия">
-      </div>
-      <div>
-        <label for="feedback-form-email">Ваш e-mail:</label>
-        <input type="text" id="feedback-form-email" placeholder="email@example.com">
-      </div>
-      <div>
-        <label for="feedback-form-message">Текст письма:</label>
-        <textarea rows="5" id="feedback-form-message"></textarea>
-      </div>
-      <div>
-        <input type="submit" value="Отправить">
-      </div>
-    </form>
-  </div>
   <div class="modal map-popup" style="display: none;">
     <div class="modal-header">
       <button type="button" class="btn btn-close">Закрыть окно</button>
