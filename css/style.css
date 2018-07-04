@@ -693,6 +693,36 @@ body{
     background-repeat: no-repeat;
 }
 
+.slide-toggle{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 220px;
+    left: 296px;
+    display: flex;
+    list-style: none;
+}
+
+.slide-toggle-item{
+    position: relative;
+    margin-right: 20px;
+}
+
+.slide-toggle-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-image: url("../img/slide-toggle-off.svg");
+    background-repeat: no-repeat;
+}
+
+input[type="radio"]:checked ~ .slide-toggle-item::before{
+    background-image: url("../img/slide-toggle-on.svg");
+}
+
 .popular .container{
     flex-direction: column;
     flex-wrap: wrap;
