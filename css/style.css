@@ -1105,11 +1105,13 @@ input[type="radio"]:checked ~ .slide-toggle-item::before{
 }
 
 .service-guarantee{
+    display: none;
     background-image: url("../img/guarantee.png");
     background-size: 389px 283px;
 }
 
 .service-credit{
+    display: none;
     background-image: url("../img/credit.png");
     background-size: 465px 285px;
 }
