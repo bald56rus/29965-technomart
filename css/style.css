@@ -1011,6 +1011,7 @@ input[type="radio"]:checked ~ .slide-toggle-item::before{
 }
 
 .service-items{
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -1019,6 +1020,17 @@ input[type="radio"]:checked ~ .slide-toggle-item::before{
     padding: 0;
     list-style: none;
     margin-right: 80px;
+}
+
+.service-items::after{
+    content: "";
+    position: absolute;
+    top: -47px;
+    right: 0;
+    width: 10px;
+    height: 272px;
+    background-image: url("../img/separator.png");
+    background-repeat: no-repeat;
 }
 
 .service-item{
