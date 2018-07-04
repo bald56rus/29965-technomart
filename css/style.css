@@ -1907,3 +1907,11 @@ input[type="radio"]:checked ~ .filter-radio::before{
     border: none;
     border-radius: 3px;
 }
+
+.map-popup{
+    display: none;
+    top: 183px;
+    left: 50%;
+    margin-left: -470px;
+    box-shadow: 0 0 32px 0 rgba(47, 42, 43, 0.5);
+}
