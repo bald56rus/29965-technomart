@@ -1304,6 +1304,14 @@ footer .address{
     fill: #32425c;
 }
 
+.user-name:active{
+    opacity: 0.3;
+}
+
+.user-logout-btn:active .icon-logout{
+    fill: #c5c5c5;
+}
+
 .user-logout-btn{
     padding-right: 10px;
     font-size: 0;
