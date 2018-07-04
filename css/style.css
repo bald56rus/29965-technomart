@@ -71,24 +71,48 @@ body{
     background-color: transparent;
 }
 
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+  
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  
+    white-space: nowrap;
+  
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 .header-top{
     color:#ffffff;
     background-color: #293449;
 }
 
 .search-form{
+    position: relative;
     display: flex;
     align-items: stretch;
     flex-grow: 1;
     height: 100%;
+    z-index: 100;
 }
 
-.search-form:hover .search-form-btn::before{
-    opacity: 1;
+.icon-search{
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    fill:  #ffffff;
+    opacity: 0.3;
+    z-index: 300;
 }
 
 .search-form-input{
-    padding-left: 49px;
+    position: absolute;
+    padding: 12px 0px 12px 49px;
     font-family: "Cuprum";
     font-size: 17px;
     line-height: 18px;
@@ -96,6 +120,11 @@ body{
     background-color: #293449;
     border: none;
     width: 100%;
+    z-index: 200;
+}
+
+.search-form:hover .icon-search{
+    opacity: 1;
 }
 
 .search-form-input::placeholder{
@@ -110,17 +139,9 @@ body{
     background-color: #ffffff;
 }
 
-.search-form-btn{
-    position: absolute;
-    border: none;
-    background-color: transparent;
-}
-
-.icon-search{
-    margin-top: 11px;
-    margin-left: 11px;
-    fill: #ffffff;
-    opacity: 0.3;
+.search-form-input:focus ~ .icon-search{
+    opacity: 1;
+    fill: #ee3643;
 }
 
 .header-bottom{
