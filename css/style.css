@@ -480,6 +480,10 @@ body{
     fill: #32425c;
 }
 
+.login-btn:active .icon-login{
+    fill: #c5c5c5;
+}
+
 .site-navigation .menu-link:hover{
     background-color: #293449;
 }
@@ -1642,6 +1646,16 @@ footer .address{
 
 .filter-input-radio:checked ~ .filter-radio::before{
     background-image: url("../img/radio-on.svg");
+}
+
+.filter-input-checkbox:disabled ~ .filter-checkbox::before,
+.filter-input-radio:disabled ~ .filter-radio::before{
+    opacity: 0.4;
+}
+
+.filter-input-checkbox:disabled ~ .filter-checkbox,
+.filter-input-radio:disabled ~ .filter-radio{
+    opacity: 0.4;
 }
 
 .form-filter-btn{
