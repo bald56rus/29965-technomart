@@ -1730,7 +1730,8 @@ input[type="radio"]:checked ~ .filter-radio::before{
 
 .catalog-footer-desc{
     margin: 0;
-    width: 850px;
+    width: 920px;
+    font-family: "PTSans";
     font-size: 13px;
     line-height: 24px;
 }
