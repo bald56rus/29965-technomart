@@ -1328,6 +1328,7 @@ footer .address{
 .breadcrumb-link{
     display: inline-block;
     vertical-align: middle;
+    font-family: "PTSans";
     font-size: 13px;
     line-height: 18px;
     text-decoration: none;
@@ -1341,12 +1342,12 @@ footer .address{
     height: 12px;
     position: absolute;
     top: 2px;
-    left: 25px;
+    left: -24px;
     background-image: url("../img/icon-right-small.svg");
     background-repeat: no-repeat;
 }
 
-.breadcrumb-item.first::before{
+.breadcrumb-item:first-of-type::before{
     content: "";
     width: 14px;
     height: 12px;
@@ -1357,7 +1358,11 @@ footer .address{
     background-repeat: no-repeat;
 }
 
-.breadcrumb-item.first .breadcrumb-link{
+.breadcrumb-item:first-of-type{
+    margin-right:30px;
+}
+
+.breadcrumb-item:first-of-type .breadcrumb-link{
     font-size: 0;
     padding-right: 24px;
 }
@@ -1368,6 +1373,10 @@ footer .address{
 
 .breadcrumb-item:last-of-type{
     margin-right: 0;
+}
+
+.breadcrumb-item:nth-of-type(2){
+    letter-spacing: 0.2px;
 }
 
 .catalog-header{
