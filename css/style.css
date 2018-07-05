@@ -1964,6 +1964,10 @@ footer .address{
 }
 
 .map-popup{
+    width: 940px;
+    height: 446px;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
     box-shadow: 0 0 32px 0 rgba(47, 42, 43, 0.5);
 }
 
