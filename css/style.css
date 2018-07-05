@@ -195,7 +195,8 @@ body{
 }
 
 .header-top-menu .menu-link{
-    padding: 12px 30px 12px 47px; 
+    min-width: 150px;
+    padding: 12px 5px 12px 21px; 
     font-size: 17px;
     line-height: 18px;
     text-decoration: none;
@@ -206,7 +207,7 @@ body{
     content: "";
     position: absolute;
     top: 12px;
-    left: 19px;
+    left: 17px;
     width: 14px;
     height: 16px;
     background-image: url("../img/icon-bookmark.svg");
@@ -218,7 +219,7 @@ body{
     content: "";
     position: absolute;
     top: 12px;
-    left: 15px;
+    left: 18px;
     width: 14px;
     height: 16px;
     background-image: url("../img/icon-cart.svg");
@@ -232,6 +233,10 @@ body{
 
 .header-top-menu .menu-item:hover:active{
     opacity: 0.5;
+}
+
+.header-top-menu .menu-link.active{
+    background-color: #ee3643;
 }
 
 .header-top-menu .menu-link:hover{
@@ -347,6 +352,7 @@ body{
 
 .menu-link{
     display: inline-block;
+    text-align: center;
     vertical-align: middle;
     text-decoration: none;
 }
