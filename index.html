@@ -12,11 +12,9 @@
   <header>
     <div class="header-top">
       <div class="container">
-        <div class="logo">
-          <a href="index.html" class="brand">
-            <img src="img/logo.png" width="111" height="18" alt="Техномарт">
-          </a>
-        </div>
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" width="111" height="18" alt="Техномарт">
+        </a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <input type="search" class="search-form-input" placeholder="Поиск:" id="search">
           <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
@@ -162,7 +160,7 @@
       <div class="container">
         <div class="popular-header">
           <h2 class="popular-header-title">Популярные товары:</h2>
-          <button type="button" class="btn popular-header-btn">Все популярные товары</button>
+          <a href="catalog.html" class="btn popular-header-btn">Все популярные товары</a>
         </div>
         <ul class="catalog-items">
           <li class="catalog-item">
@@ -227,7 +225,7 @@
       <div class="container">
         <div class="popular-header">
           <h2 class="popular-header-title">Популярные производители:</h2>
-          <button type="button" class="btn popular-header-btn">Все производители</button>
+          <a href="catalog.html" class="btn popular-header-btn">Все производители</a>
         </div>
         <ul class="vendor-items">
           <li class="vendor-item">
@@ -310,7 +308,7 @@
               <p class="service-desc">
                 Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
               </p>
-              <button type="button" class="btn service-credit-btn">Отправить заявку</button>
+              <a href="credit.html" class="btn service-credit-btn">Отправить заявку</a>
             </div>
           </div>
         </div>
@@ -318,7 +316,7 @@
     </div>
     <div class="about-us">
       <div class="container">
-        <section class="about-us-details">
+        <div class="about-us-details">
           <h2 class="about-us-title">Компания &laquo;Техномарт&raquo;</h2>
           <p class="about-us-desc">
             Настоящий мужской шоппинг нaчинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей
@@ -333,8 +331,8 @@
             <li class="delivery-company-item">ЖелДорЭкспедиция</li>
           </ul>
           <a href="#" class="btn about-us-btn">Подробнее о компании</a>
-        </section>
-        <aside class="about-us-contacts">
+        </div>
+        <div class="about-us-contacts">
           <h2 class="about-us-title">Контакты</h2>
           <p class="about-us-desc">
             Вы можете забрать товар сами, заехав в наш офис:
@@ -342,19 +340,17 @@
           <a href="https://yandex.ru/maps/" class="map-small">
             <img class="about-us-map" src="img/map-small.jpg" width="300" height="158" alt="Большая Конюшенная ул., 19">
           </a>
-          <button type="button" class="btn write-us-btn">Заблудились? Напишите нам</button>
-        </aside>
+          <a href="feedback.html" class="btn write-us-btn">Заблудились? Напишите нам</a>
+        </div>
       </div>
     </div>
   </main>
   <footer>
     <div class="footer-top">
       <div class="container">
-        <div class="logo">
-          <a href="#" class="brand">
-            <img src="img/footer-logo.png" width="138" height="21" alt="Техномарт">
-          </a>
-        </div>
+        <a href="#" class="logo">
+          <img src="img/footer-logo.png" width="138" height="21" alt="Техномарт">
+        </a>
         <ul class="menu-items">
           <li class="menu-item">
             <a class="menu-link" href="#">Компания</a>
@@ -450,11 +446,22 @@
         <button type="submit" class="feedback-send-btn">Отправить</button>
       </div>
     </form>
-  </div>  
+  </div>
   <div class="modal map-popup">
     <a href="#" class="modal-close-btn">Закрыть окно</a>
     <iframe src="https://yandex.ru/map-widget/v1/-/CBuJrHxskA" width="940" height="446" frameborder="0"></iframe>
   </div>
+  <div class="modal cart-modal">
+    <a href="#" class="modal-close-btn">Закрыть окно</a>
+    <form class="cart-modal-body" action="https://echo.htmlacademy.ru" method="get">
+      <span class="cart-modal-message">Товар добавлен в корзину</span>
+    </form>
+    <div class="cart-modal-footer">
+      <button type="submit" class="cart-order-btn">Оформить заказ</button>
+      <button type="button" class="cart-continue-btn">Продолжить покупки</button>
+    </div>
+  </div>
   <script src="js/script.js"></script>
 </body>
+
 </html>

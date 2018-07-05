@@ -172,13 +172,12 @@ body{
 }
 
 .header-top .logo{    
-    min-height: 47px;
+    height: 47px;
     margin-bottom: -5px;
 }
 
 .footer-top .logo{
-    min-height: 68px;
-    margin-bottom: -5px
+    height: 68px;
 }
 
 .header-top .container{
@@ -239,7 +238,7 @@ body{
     background-color: #ee3643;
 }
 
-.header-top-menu .menu-link:hover{
+.header-top-menu .menu-link:not(.active):hover{
     background-color: #212a3a;
 }
 
@@ -1175,16 +1174,16 @@ body{
     line-height: 24px;
 }
 
+.about-us-contacts .about-us-desc{
+    width: 220px;
+}
+
 .about-us-details .about-us-desc:nth-of-type(1){
     padding-right: 60px;    
 }
 
 .about-us-details .about-us-desc:nth-of-type(2){
     padding-right: 200px;
-}
-
-.about-us-contacts .about-us-desc{
-    padding-right: 90px;
 }
 
 .about-us .btn{
@@ -1638,7 +1637,6 @@ footer .address{
 .filter-option:last-of-type{
     margin-bottom: 0;
 }
-
 
 .filter-checkbox::before{
     content: "";
