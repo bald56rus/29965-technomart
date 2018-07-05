@@ -1,14 +1,14 @@
 function resetCurrService(){    
-    document.querySelector('.service-item.active').classList.remove('active');
-    document.querySelector('.about-service.active').classList.remove('active');
+    document.querySelector('.service-item-active').classList.remove('service-item-active');
+    document.querySelector('.about-service-active').classList.remove('about-service-active');
 };
 
 let serviceDelivery = document.querySelector('.service-item-delivery');
 if(serviceDelivery){
     serviceDelivery.addEventListener('click', function(evt){
         resetCurrService();
-        serviceDelivery.classList.add('active');
-        document.querySelector('.about-service-delivery').classList.add('active');
+        serviceDelivery.classList.add('service-item-active');
+        document.querySelector('.about-service-delivery').classList.add('about-service-active');
     });
 }
 
@@ -16,8 +16,8 @@ let serviceGuarantee = document.querySelector('.service-item-guarantee');
 if(serviceGuarantee){
     serviceGuarantee.addEventListener('click', function(evt){
         resetCurrService();
-        serviceGuarantee.classList.add('active');
-        document.querySelector('.about-service-guarantee').classList.add('active');
+        serviceGuarantee.classList.add('service-item-active');
+        document.querySelector('.about-service-guarantee').classList.add('about-service-active');
     });
 }
 
@@ -25,8 +25,8 @@ let serviceCredit = document.querySelector('.service-item-credit');
 if(serviceCredit){
     serviceCredit.addEventListener('click', function(evt){
         resetCurrService();
-        serviceCredit.classList.add('active');
-        document.querySelector('.about-service-credit').classList.add('active');
+        serviceCredit.classList.add('service-item-active');
+        document.querySelector('.about-service-credit').classList.add('about-service-active');
     });
 }
 

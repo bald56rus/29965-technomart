@@ -12,32 +12,29 @@
   <header>
     <div class="header-top">
       <div class="container">
-        <div class="logo">
-          <a href="index.html" class="brand">
-            <img src="img/logo.png" width="111" height="18" alt="Техномарт">
-          </a>
-        </div>
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" width="111" height="18" alt="Техномарт">
+        </a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <input type="search" class="search-form-input" placeholder="Поиск:" id="search">
           <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
             <path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"
             />
           </svg>
-          <label for="search" class="visually-hidden">Поиск по сайту</label>
         </form>
         <ul class="header-top-menu menu-items">
           <li class="menu-item">
-            <a class="menu-link bookmark" href="bookmark">Закладки:
+            <a class="menu-link header-top-menu-link bookmark" href="bookmark">Закладки:
               <span class="counter">0</span>
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link cart active" href="cart">Корзина:
+            <a class="menu-link header-top-menu-link cart active" href="cart">Корзина:
               <span class="counter">10</span>
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link checkout" href="#">Оформить заказ</a>
+            <a class="menu-link header-top-menu-link checkout" href="#">Оформить заказ</a>
           </li>
         </ul>
       </div>
@@ -56,7 +53,7 @@
           <div class="user-profile">
             <a href="user" class="user-name">
               <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewbox="0 0 20 18">
-                <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"
+                <path fill="#32425c" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"
                 />
               </svg>
               Равшан Джамшутович
@@ -64,8 +61,8 @@
             <a href="logout" class="user-logout-btn">
               <svg class="icon-logout" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewbox="0 0 21 17">
                 <g>
-                  <path d="M21 8.5L12.125 0v6h-6v5h6v6z" />
-                  <path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"
+                  <path fill="#32425c" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
+                  <path fill="#32425c" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"
                   />
                 </g>
               </svg>
@@ -195,22 +192,22 @@
       <section class="catalog-section">
         <div class="section-header">
           <h2 class="section-header-title">Сортировка:</h2>
-          <ul class="menu-sort menu-sort-options">
-            <li class="sort-option sort-option-active">
-              <a href="" class="menu-sort-link">По цене</a>
+          <ul class="menu-sort-options">
+            <li class="menu-sort-option">
+              <a href="" class="menu-sort-link menu-sort-link-active">По цене</a>
             </li>
-            <li class="sort-option">
+            <li class="menu-sort-option">
               <a href="" class="menu-sort-link">По типу</a>
             </li>
-            <li class="sort-option">
+            <li class="menu-sort-option">
               <a href="" class="menu-sort-link">По функционалу</a>
             </li>
           </ul>
-          <ul class="menu-sort menu-sort-orders">
-            <li class="sort-order sort-order-active">
-              <a href="" class="sort-order-asc">По возростанию</a>
+          <ul class="menu-sort-orders">
+            <li class="menu-sort-order">
+              <a href="" class="sort-order-asc sort-order-active">По возростанию</a>
             </li>
-            <li class="sort-order">
+            <li class="menu-sort-order">
               <a href="" class="sort-order-desc">По убыванию</a>
             </li>
           </ul>
@@ -374,11 +371,9 @@
   <footer>
     <div class="footer-top">
       <div class="container">
-        <div class="logo">
-          <a href="" class="brand">
-            <img src="img/footer-logo.png" width="138" height="21" alt="Техномарт">
-          </a>
-        </div>
+        <a href="index.html" class="logo">
+          <img src="img/footer-logo.png" width="138" height="21" alt="Техномарт">
+        </a>
         <ul class="menu-items">
           <li class="menu-item">
             <a class="menu-link" href="#">Компания</a>
@@ -421,7 +416,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright">
-          &copy; 2010-2017 Компания &laquo;Техномарт&raquo; Все права защинены
+          &copy; 2010-2017 Компания &laquo;Техномарт&raquo; Все права защищены
         </p>
         <ul class="socials">
           <li class="social-btn">
@@ -443,11 +438,11 @@
         <ul class="footer-bottom-menu">
           <li class="bottom-menu-item">
             Обратная связь:
-            <a href="#" class="menu-link">mail@htmlacademy.ru</a>
+            <a href="#" class="menu-link footer-bottom-menu-link">mail@htmlacademy.ru</a>
           </li>
           <li class="bottom-menu-item">
             Разработано -
-            <a href="https://htmlacademy.ru/intensive/htmlcss" class="menu-link">htmlacademy.ru</a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="menu-link footer-bottom-menu-link">htmlacademy.ru</a>
           </li>
         </ul>
       </div>

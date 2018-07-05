@@ -43,11 +43,15 @@
         url("../fonts/ptsansbold.woff") format("woff");
 }
 
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
 
 body{
-    font-family: "Cuprum", Arial, sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     color: #ffffff;
 }
@@ -70,22 +74,6 @@ body{
     border-radius: 3px;
     background-color: transparent;
 }
-
-.visually-hidden:not(:focus):not(:active) {
-    position: absolute;
-  
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-  
-    white-space: nowrap;
-  
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
 
 .header-top{
     color:#ffffff;
@@ -110,12 +98,17 @@ body{
     z-index: 300;
 }
 
+.icon-search:active{
+    opacity: 0.5;
+}
+
+.search-form:hover .icon-search{
+    opacity: 1;
+}
+
 .search-form-input{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 12px 0px 12px 49px;
-    font-family: "Cuprum";
+    padding: 11px 0px 11px 49px;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     line-height: 18px;
     color: #ffffff;
@@ -125,14 +118,16 @@ body{
     z-index: 200;
 }
 
-.search-form:hover .icon-search{
-    opacity: 1;
+.search-form-input:active ~ .icon-search{
+    opacity: 0.5;
 }
 
 .search-form-input::placeholder{
+    font-family: "Cuprum", "Arial", sans-serif;
     color: #ffffff;
 }
 .search-form-input::-ms-input-placeholder{
+    font-family: "Cuprum", "Arial", sans-serif;
     color: #ffffff;
 }
 
@@ -159,6 +154,8 @@ body{
 }
 
 .logo{
+    margin-bottom: -5px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,9 +168,13 @@ body{
     background-color: #ca2c37;
 }
 
+.logo:active{
+    background-color: #ba2732;
+}
+
 .header-top .logo{    
     height: 47px;
-    margin-bottom: -5px;
+    
 }
 
 .footer-top .logo{
@@ -193,7 +194,7 @@ body{
     position: relative;
 }
 
-.header-top-menu .menu-link{
+.header-top-menu-link{
     min-width: 150px;
     padding: 12px 5px 12px 21px; 
     font-size: 17px;
@@ -226,23 +227,23 @@ body{
     opacity: 0.3;
 }
 
-.header-top-menu .menu-link:hover::before{
+.header-top-menu-link:hover::before{
     opacity: 1;
 }
 
-.header-top-menu .menu-link:hover:active{
+.header-top-menu-link:active::before{
     opacity: 0.5;
 }
 
-.header-top-menu .menu-link.active{
+.header-top-menu-link.active{
     background-color: #ee3643;
 }
 
-.header-top-menu .menu-link:not(.active):hover{
+.header-top-menu-link:not(.active):hover{
     background-color: #212a3a;
 }
 
-.header-top-menu .menu-link:active{
+.header-top-menu-link:active{
     color: rgba(255,255,255,0.6);
     background-color: #161d29;
 }
@@ -278,7 +279,7 @@ body{
     margin: 0;
     margin-top: 2px;
     margin-left: 52px;
-    font-family: "Cuprum Italic";
+    font-family: "Cuprum Italic", "Arial", sans-serif;
     font-weight: normal;
     font-style: italic;
     font-size: 16px;
@@ -404,12 +405,12 @@ body{
     list-style: none;
 }
 
-.footer-bottom-menu .bottom-menu-item{
+.bottom-menu-item{
     margin-left: 48px;
     color: #ffffff;
 }
 
-.footer-bottom-menu .menu-link{
+.footer-bottom .menu-link{
     text-decoration: none;
     color: #ffd180;
 }
@@ -422,11 +423,11 @@ body{
     width: 100px;
 }
 
-.bottom-menu-item:hover .menu-link{
+.footer-bottom-menu-link:hover{
     text-decoration: underline;
 }
 
-.bottom-menu-item:active .menu-link{
+.footer-bottom-menu-link:active{
     text-decoration: none;
     color: #ee3643;
 }
@@ -659,7 +660,6 @@ body{
     top: 0;
     left: 0;
     width: 620px;
-    padding: 114px 25px 20px 0px;
 }
 
 .slide-title{
@@ -675,6 +675,7 @@ body{
     margin: 0;
     padding: 0;
     margin-top: 2px;
+    font-family: "PTSans", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
 }
@@ -700,7 +701,7 @@ body{
 .slide-btn{
     position: absolute;
     font-size: 0;
-    width: 20px;
+    width: 22px;
     height: 40px;
 }
 
@@ -793,6 +794,7 @@ body{
     min-width: 253px;
     padding-left: 50px;
     padding-right: 50px;
+    text-align: center;
     color: #ffffff;
     background-color: #ee3643;
 }
@@ -906,7 +908,7 @@ body{
 }
 
 .catalog-item-title{
-    font-family: "PTSans Bold";
+    font-family: "PTSans Bold", "Arial", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
@@ -917,7 +919,7 @@ body{
 
 .catalog-item-price,
 .catalog-item-price-old{
-    font-family: "PTSans Bold";
+    font-family: "PTSans Bold", "Arial", sans-serif;
     font-weight: 700;
     font-size: 17px;
     line-height: 18px;
@@ -1010,9 +1012,11 @@ body{
     margin: 0;
     padding-top: 2px;
     padding-right: 530px;
-    font-family: "PTSans";
+    font-family: "PTSans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
     color: #000000;
 }
 
@@ -1060,7 +1064,8 @@ body{
     background-color: #293449;
 }
 
-.service-item.active{
+.service-item-active:hover,
+.service-item-active{
     background-color: #ffffff;
     color: #32425c;
     box-shadow: none;
@@ -1080,9 +1085,10 @@ body{
 .service-desc{
     margin: 0;
     padding: 0;
-    font-family: "PTSans";
+    font-family: "PTSans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
+    font-weight: 600;
     color: #000000;
 }
 
@@ -1142,7 +1148,7 @@ body{
     display: none;
 }
 
-.about-service.active{
+.about-service-active{
     display: block;
 }
 
@@ -1169,9 +1175,10 @@ body{
     margin: 0;
     margin-top: 25px;    
     padding: 0;
-    font-family: "PTSans";
+    font-family: "PTSans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
+    font-weight: 600;
 }
 
 .about-us-contacts .about-us-desc{
@@ -1214,6 +1221,7 @@ body{
     padding-left: 35px;
     font-size: 18px;
     line-height: 20px;
+    font-weight: 600;
 }
 
 .delivery-company-item:last-of-type{
@@ -1232,8 +1240,8 @@ body{
 }
 
 .write-us-btn{
+    text-align: center;
     margin: 36px 0px 86px 0px;
-    align-self: stretch;
 }
 
 .footer-top{
@@ -1243,7 +1251,7 @@ body{
 }
 
 .footer-bottom{
-    padding-top:22px;
+    padding-top:20px;
     padding-bottom: 18px;
     padding-left: 6px;
     background-color: #293449;
@@ -1311,33 +1319,31 @@ footer .address{
     color: #000000;
 }
 
-.user-name .icon-user{
+.icon-user{
     position: absolute;
     top: 13px;
     left: 13px;
-    fill: #c5c5c5;
+    opacity: 0.3;
+}
+
+.icon-logout{
+    opacity: 0.3;
 }
 
 .user-name:hover .icon-user,
 .user-logout-btn:hover .icon-logout{
-    fill: #32425c;
+    opacity: 1;
 }
 
-.user-name:active{
-    opacity: 0.3;
-}
-
-.user-logout-btn:active .icon-logout{
-    fill: #c5c5c5;
-}
 
 .user-logout-btn{
     padding-right: 10px;
     font-size: 0;
 }
 
-.user-logout-btn .icon-logout{
-    fill: #c5c5c5;
+.user-name:active,
+.user-logout-btn:active .icon-logout{
+    opacity: 0.3;
 }
 
 .user-profile-menu{
@@ -1388,7 +1394,7 @@ footer .address{
 .breadcrumb-link{
     display: inline-block;
     vertical-align: middle;
-    font-family: "PTSans";
+    font-family: "PTSans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-decoration: none;
@@ -1484,23 +1490,25 @@ footer .address{
     margin: 0;
     margin-left: 18px;
     padding: 10px 0px;
-    font-family: "PTSans";
+    font-family: "PTSans", "Arial", sans-serif;
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
     text-transform: uppercase;
     color: #000000;
 }
 
 .form-filter{
-    font-family: "PTSans";
+    font-family: "PTSans", "Arial", sans-serif;
     color: #000000;
 }
 
 .form-group{
     margin: 0;
     padding: 0;
-    padding-bottom: 25px;
+    padding-bottom: 24px;
     border: none;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -1592,6 +1600,7 @@ footer .address{
     padding-bottom: 10px;
     width: 96px;
     font-size: 17px;
+    line-height: 18px;
     background-color: #f7f3ec;
     border: none;
 }
@@ -1631,7 +1640,7 @@ footer .address{
 .filter-option{
     position: relative;
     margin-left: 36px;
-    margin-bottom: 19px;
+    margin-bottom: 20px;
 }
 
 .filter-option:last-of-type{
@@ -1647,6 +1656,7 @@ footer .address{
     height: 23px;
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
+    opacity: 0.75;
 }
 
 .filter-radio::before{
@@ -1658,14 +1668,26 @@ footer .address{
     height: 25px;
     background-image: url("../img/radio-off.svg");
     background-repeat: no-repeat;
+    opacity: 0.75;
 }
+
+
 
 .filter-input-checkbox:checked ~ .filter-checkbox::before{
     background-image: url("../img/checkbox-on.svg");
+    opacity: 0.75;
 }
 
 .filter-input-radio:checked ~ .filter-radio::before{
     background-image: url("../img/radio-on.svg");
+    opacity: 0.75;
+}
+
+.filter-input-checkbox:checked ~ .filter-checkbox:hover::before,
+.filter-input-checkbox ~ .filter-checkbox:hover::before,
+.filter-input-radio:checked ~ .filter-radio:hover::before,
+.filter-input-radio ~ .filter-radio:hover::before{
+    opacity: 1;
 }
 
 .filter-input-checkbox:disabled ~ .filter-checkbox::before,
@@ -1679,30 +1701,34 @@ footer .address{
 }
 
 .form-filter-btn{
-    margin-top: 79px;
+    margin-top: 76px;
     padding-left: 38px;
     padding-right: 38px;
-    letter-spacing: -0.7px;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-size: 13px;
     border: 1px solid #e5e5e5;
 }
 
-.menu-sort{
+.menu-sort-options{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 355px;
+    margin-left: 139px;
+}
+
+.menu-sort-orders{
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.menu-sort-options{
-    margin-left: 141px;
-}
-
-.menu-sort-orders{
     margin-left: 46px;
 }
 
-.menu-sort .menu-sort-link{
-    font-family: "PTSans";
+.menu-sort-link{
+    font-family: "PTSans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-decoration: none;
@@ -1711,32 +1737,32 @@ footer .address{
     border-bottom: 1px dotted #ee3643;
 }
 
-.sort-option{
+.menu-sort-option:not(:nth-of-type(3n)){
     margin-right: 68px;    
 }
 
-.sort-option-active .menu-sort-link{
-    color: #ee3643;
-    border: none;
-}
-
-.sort-option:hover .menu-sort-link{
-    color: #000000;
-    border-bottom: 1px solid #ee3643;
-}
-
-.sort-option:last-of-type,
-.sort-order:last-of-type{
-    margin-right: 0;
-}
-
-.sort-order{
+.menu-sort-order{
     margin-right: 34px;
     position: relative;
 }
 
-.sort-order a{
+.menu-sort-order a{
     font-size: 0;
+}
+
+
+.menu-sort-order:last-of-type{
+    margin-right: 0;
+}
+
+.menu-sort-link-active{
+    color: #ee3643;
+    border: none;
+}
+
+.menu-sort-link:hover{
+    color: #000000;
+    border-bottom: 1px solid #ee3643;
 }
 
 .sort-order-asc::before{
@@ -1751,14 +1777,6 @@ footer .address{
 	border-bottom: 10px solid #c5c5c5;
 }
 
-.sort-order-asc:hover::before{
-    border-bottom: 10px solid #000000;
-}
-
-.sort-order-active .sort-order-asc::before{
-    border-bottom: 10px solid #ee3643;
-}
-
 .sort-order-desc::before{
     content: "";
     position: absolute;
@@ -1771,11 +1789,21 @@ footer .address{
 	border-top: 10px solid #c5c5c5;
 }
 
-.sort-order-desc:hover::before{
+.sort-order-asc:hover::before,
+.sort-order-asc.sort-order-active:hover::before{
+    border-bottom: 10px solid #000000;
+}
+
+.sort-order-desc:hover::before,
+.sort-order-desc.sort-order-active:hover::before{
     border-top: 10px solid #000000;
 }
 
-.sort-order-active .sort-order-desc::before{
+.sort-order-asc.sort-order-active::before{
+    border-bottom: 10px solid #ee3643;
+}
+
+.sort-order-desc.sort-order-active::before{
     border-top: 10px solid #ee3643;
 }
 
@@ -1801,10 +1829,12 @@ footer .address{
 
 .catalog-footer-desc{
     margin: 0;
-    width: 920px;
-    font-family: "PTSans";
+    width: 950px;
+    font-family: "PTSans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
+    font-weight: 600;
+    letter-spacing: 0.15px;
 }
 
 .catalog-footer-desc:first-of-type{
@@ -1831,6 +1861,9 @@ footer .address{
 .pagination-btn{
     min-width:38px;
     min-height: 38px;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
     text-transform: uppercase;
     border: 1px solid #e5e5e5;
     background-color: #ffffff;
@@ -1869,13 +1902,14 @@ footer .address{
 }
 
 .modal-close-btn{
+    position: absolute;
+    top: 15px;
+    right: 10px;
     font-size: 0;    
 }
 
 .modal-close-btn::before{
-    position: absolute;
-    top: 15px;
-    right: 10px;
+    display: block;
     content: "";
     width: 21px;
     height: 21px;
@@ -1906,7 +1940,7 @@ footer .address{
 }
 
 .feedback-modal .feedback-group-title{
-    font-family: "Cuprum";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 18px;
     line-height: 18px;
 }
@@ -1929,7 +1963,7 @@ footer .address{
 
 .feedback-modal input::placeholder,
 .feedback-modal textarea::placeholder{
-    font-family: "Cuprum";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: #a9a9a9;
@@ -1937,7 +1971,7 @@ footer .address{
 
 .feedback-modal input::-ms-input-placeholder,
 .feedback-modal textarea::-ms-input-placeholder{
-    font-family: "Cuprum";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: #a9a9a9;
@@ -1950,7 +1984,7 @@ footer .address{
 }
 
 .feedback-send-btn{
-    font-family: "Cuprum";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -1969,6 +2003,12 @@ footer .address{
     box-shadow: 0 0 32px 0 rgba(47, 42, 43, 0.5);
 }
 
+.map-frame{
+    width: 940px;
+    height: 446px;
+    border: none;
+}
+
 .cart-modal{
     width: 620px;
     box-shadow: inset 0 5px 0 0 #ff5357;
@@ -1981,7 +2021,7 @@ footer .address{
 .cart-modal-message{
     position: relative;
     padding-left: 97px;
-    font-family: "Cuprum";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 30px;
     line-height: 30px;
     color: #000000;
@@ -2007,7 +2047,7 @@ footer .address{
 
 .cart-order-btn,
 .cart-continue-btn{
-    font-family: "Cuprum";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
