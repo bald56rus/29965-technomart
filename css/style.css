@@ -944,6 +944,11 @@ body{
     color: #a9a9a9;
 }
 
+.catalog-item-price:hover,
+.catalog-item-price-old:hover{
+    cursor: pointer;
+}
+
 .vendor-item{
     justify-content: center;
 }
