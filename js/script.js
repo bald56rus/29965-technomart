@@ -1,56 +1,93 @@
-let serviceDelivery = document.querySelector('.service-item-delivery');
-let serviceGuarantee = document.querySelector('.service-item-guarantee');
-let serviceCredit = document.querySelector('.service-item-credit');
-
 function resetCurrService(){    
     document.querySelector('.service-item.active').classList.remove('active');
     document.querySelector('.about-service.active').classList.remove('active');
 };
 
-serviceDelivery.addEventListener('click', function(e){
-    resetCurrService();
-    serviceDelivery.classList.add('active');
-    document.querySelector('.about-service-delivery').classList.add('active');
-});
+let serviceDelivery = document.querySelector('.service-item-delivery');
+if(serviceDelivery){
+    serviceDelivery.addEventListener('click', function(evt){
+        resetCurrService();
+        serviceDelivery.classList.add('active');
+        document.querySelector('.about-service-delivery').classList.add('active');
+    });
+}
 
-serviceGuarantee.addEventListener('click', function(e){
-    resetCurrService();
-    serviceGuarantee.classList.add('active');
-    document.querySelector('.about-service-guarantee').classList.add('active');
-});
+let serviceGuarantee = document.querySelector('.service-item-guarantee');
+if(serviceGuarantee){
+    serviceGuarantee.addEventListener('click', function(evt){
+        resetCurrService();
+        serviceGuarantee.classList.add('active');
+        document.querySelector('.about-service-guarantee').classList.add('active');
+    });
+}
 
-serviceCredit.addEventListener('click', function(e){
-    resetCurrService();
-    serviceCredit.classList.add('active');
-    document.querySelector('.about-service-credit').classList.add('active');
-});
+let serviceCredit = document.querySelector('.service-item-credit');
+if(serviceCredit){
+    serviceCredit.addEventListener('click', function(evt){
+        resetCurrService();
+        serviceCredit.classList.add('active');
+        document.querySelector('.about-service-credit').classList.add('active');
+    });
+}
 
-let modalClose = document.querySelector('.modal-close-btn');
+function closeModal(modal){
+    let close = modal.querySelector('.modal-close-btn');
+    let closeHandler = function(evt){
+        evt.preventDefault();
+        modal.classList.remove('modal-show');
+        close.removeEventListener('click', closeHandler);
+    }
+    close.addEventListener('click', closeHandler);
+}
+
 let mapSmall = document.querySelector('.map-small');
 let mapPopup = document.querySelector('.map-popup');
-let writeUsBtn = document.querySelector('.write-us-btn');
+if(mapSmall && mapPopup){
+    mapSmall.addEventListener('click', function(evt){
+        evt.preventDefault();
+        mapPopup.classList.add('modal-show');
+        closeModal(mapPopup);
+    });   
+}
+
+
+let writeUs = document.querySelector('.write-us-btn');
 let feedbackForm = document.querySelector('.feedback-modal');
+if(writeUs && feedbackForm){
+    writeUs.addEventListener('click', function(evt){
+        evt.preventDefault();
+        feedbackForm.classList.add('modal-show');
+        closeModal(feedbackForm);
+    });
+}
 
-modalClose.addEventListener('click', function(e){
-    e.preventDefault();
-    document.querySelector('.modal-show').classList.remove('modal-show');
-});
-
-mapSmall.addEventListener('click', function(e){
-    e.preventDefault();
-    mapPopup.classList.add('modal-show');
-});
-
-writeUsBtn.addEventListener('click', function(e){
-    e.preventDefault();
-    feedbackForm.classList.add('modal-show');
-});
-
-let bookmarkBtn = document.querySelector('.catalog-item-bookmark');
-console.log(bookmarkBtn);
 let cartModal = document.querySelector('.cart-modal');
 
-bookmarkBtn.addEventListener('click', function(){
+function showCartModal(){
     cartModal.classList.add('modal-show');
-});
+    closeModal(cartModal);
+}
+
+function addToBookmarks(){
+    return addTo('.bookmark');
+}
+
+function addToCart(){
+    showCartModal();
+    return addTo('.cart');
+}
+
+function addTo(s){
+    let element = document.querySelector(s);
+    element.classList.add('active');
+    let counter = element.querySelector('.counter');
+    counter.innerHTML = parseInt(counter.innerHTML) + 1;
+}
+
+var catalogItems = document.querySelectorAll('.catalog-item');
+for(i = 0; i < catalogItems.length; i++){
+    let catalogItem = catalogItems[i];
+    catalogItem.querySelector('.catalog-item-bookmark').addEventListener('click', addToBookmarks);
+    catalogItem.querySelector('.catalog-item-buy').addEventListener('click', addToCart);
+}
 

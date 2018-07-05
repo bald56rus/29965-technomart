@@ -26,13 +26,13 @@
           <label for="search" class="visually-hidden">Поиск по сайту</label>
         </form>
         <ul class="header-top-menu menu-items">
-          <li class="menu-item bookmark">
-            <a class="menu-link" href="bookmark">Закладки:
+          <li class="menu-item">
+            <a class="menu-link bookmark" href="bookmark">Закладки:
               <span class="counter">0</span>
             </a>
           </li>
-          <li class="menu-item cart">
-            <a class="menu-link" href="cart">Корзина:
+          <li class="menu-item">
+            <a class="menu-link cart" href="cart">Корзина:
               <span class="counter">0</span>
             </a>
           </li>
@@ -343,28 +343,6 @@
             <img class="about-us-map" src="img/map-small.jpg" width="300" height="158" alt="Большая Конюшенная ул., 19">
           </a>
           <button type="button" class="btn write-us-btn">Заблудились? Напишите нам</button>
-          <div class="modal feedback-modal">
-            <a href="#" class="modal-close-btn">Закрыть окно</a>
-            <form action="https://echo.htmlacademy.ru" method="get">
-              <div class="feedback-modal-body">
-                <fieldset class="feedback-group">
-                  <legend class="feedback-group-title">Ваше имя:</legend>
-                  <input type="text" name="feedback-name" placeholder="Имя Фамилия">
-                </fieldset>
-                <fieldset class="feedback-group">
-                  <legend class="feedback-group-title">Ваш e-mail:</legend>
-                  <input type="text" name="feedback-email" placeholder="email@example.com">
-                </fieldset>
-                <fieldset class="feedback-group">
-                  <legend class="feedback-group-title">Текст письма:</legend>
-                  <textarea rows="5" name="feedback-description" placeholder="В свободной форме"></textarea>
-                </fieldset>
-              </div>
-              <div class="feedback-modal-footer">
-                <button type="submit" class="feedback-send-btn">Отправить</button>
-              </div>
-            </form>
-          </div>
         </aside>
       </div>
     </div>
@@ -451,6 +429,28 @@
       </div>
     </div>
   </footer>
+  <div class="modal feedback-modal">
+    <a href="#" class="modal-close-btn">Закрыть окно</a>
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <div class="feedback-modal-body">
+        <fieldset class="feedback-group">
+          <legend class="feedback-group-title">Ваше имя:</legend>
+          <input type="text" name="feedback-name" placeholder="Имя Фамилия">
+        </fieldset>
+        <fieldset class="feedback-group">
+          <legend class="feedback-group-title">Ваш e-mail:</legend>
+          <input type="text" name="feedback-email" placeholder="email@example.com">
+        </fieldset>
+        <fieldset class="feedback-group">
+          <legend class="feedback-group-title">Текст письма:</legend>
+          <textarea rows="5" name="feedback-description" placeholder="В свободной форме"></textarea>
+        </fieldset>
+      </div>
+      <div class="feedback-modal-footer">
+        <button type="submit" class="feedback-send-btn">Отправить</button>
+      </div>
+    </form>
+  </div>  
   <div class="modal map-popup">
     <a href="#" class="modal-close-btn">Закрыть окно</a>
     <img src="img/map.jpg" width="940" height="446" alt="Карта">
