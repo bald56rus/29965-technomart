@@ -631,9 +631,14 @@ body{
 }
 
 .slide{
+    display: none;
     position: relative;
     width: 620px;
     height: 266px;
+}
+
+.slide-visible{
+    display: block;
 }
 
 .slide-content{
@@ -1080,39 +1085,37 @@ body{
     margin-top: 26px;
 }
 
-.service-delivery,
-.service-guarantee,
-.service-credit{
+.about-service-delivery,
+.about-service-guarantee,
+.about-service-credit{
     height: 100%;
     background-repeat: no-repeat;
     background-position: right 0px bottom 0px;
 }
 
-.service-delivery{
+.about-service-delivery{
     background-image: url("../img/delivery.png");
     background-size: 468px 261px;
 }
 
-.service-delivery .service-desc:nth-of-type(1){
+.about-service-delivery .service-desc:nth-of-type(1){
     padding-right: 340px;
 }
 
-.service-delivery .service-desc:nth-of-type(2){
+.about-service-delivery .service-desc:nth-of-type(2){
     padding-right: 400px;
 }
 
-.service-credit .service-desc{
+.about-service-credit .service-desc{
     padding-right: 340px;
 }
 
-.service-guarantee{
-    display: none;
+.about-service-guarantee{
     background-image: url("../img/guarantee.png");
     background-size: 389px 283px;
 }
 
-.service-credit{
-    display: none;
+.about-service-credit{
     background-image: url("../img/credit.png");
     background-size: 465px 285px;
 }
@@ -1128,6 +1131,14 @@ body{
 .about-services{
     width: 620px;
     min-height: 100%;
+}
+
+.about-service{
+    display: none;
+}
+
+.about-service.active{
+    display: block;
 }
 
 .about-us{
@@ -1841,8 +1852,13 @@ footer .address{
 
 /*modals*/
 .modal{
+    display: none;
     position: fixed;
     background-color: #ffffff;
+}
+
+.modal-show{
+    display: block;
 }
 
 .modal-close-btn{
@@ -1861,7 +1877,6 @@ footer .address{
 }
 
 .feedback-modal{
-    display: none;
     width: 620px;
     bottom: 210px;
     left: 50%;
@@ -1944,7 +1959,6 @@ footer .address{
 }
 
 .map-popup{
-    display: none;
     top: 183px;
     left: 50%;
     margin-left: -470px;

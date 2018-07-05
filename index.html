@@ -109,7 +109,7 @@
           </li>
           <li class="promo-section promo-section-slider">
             <ul class="slider">
-              <li class="slide">
+              <li class="slide slide-visible">
                 <img class="slide-img" src="img/slide-drill.jpg" width="620" height="266" alt="Дрели">
                 <div class="slide-content">
                   <h2 class="slide-title">Дрели</h2>
@@ -117,7 +117,7 @@
                   <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
                 </div>
               </li>
-              <li class="slide" style="display:none">
+              <li class="slide">
                 <img class="slide-img" src="img/slide-hammer-drill.jpg" width="620" height="266" alt="Перфораторы">
                 <div class="slide-content">
                   <h2 class="slide-title">Перфораторы</h2>
@@ -281,12 +281,12 @@
         </p>
         <div class="service-container">
           <ul class="service-items">
-            <li class="service-item active">Доставка</li>
-            <li class="service-item">Гарантия</li>
-            <li class="service-item">Кредит</li>
+            <li class="service-item service-item-delivery active">Доставка</li>
+            <li class="service-item service-item-guarantee">Гарантия</li>
+            <li class="service-item service-item-credit">Кредит</li>
           </ul>
           <div class="about-services">
-            <div class="about-service service-delivery">
+            <div class="about-service about-service-delivery active">
               <h2 class="service-title">Доставка</h2>
               <p class="service-desc">
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
@@ -295,7 +295,7 @@
                 Ведь мы неплохо заработаем, поднимая его на ваш этаж!
               </p>
             </div>
-            <div class="about-service service-guarantee">
+            <div class="about-service about-service-guarantee">
               <h2 class="service-title">Гарантия</h2>
               <p class="service-desc">
                 Гарантия Если купленный у нас товар поломается или заискрит,
@@ -305,7 +305,7 @@
                 <br> Дом уж восстановите как-нибудь сами.
               </p>
             </div>
-            <div class="about-service service-credit">
+            <div class="about-service about-service-credit">
               <h2 class="service-title">Кредит</h2>
               <p class="service-desc">
                 Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
@@ -339,7 +339,7 @@
           <p class="about-us-desc">
             Вы можете забрать товар сами, заехав в наш офис:
           </p>
-          <a href="https://yandex.ru/maps/">
+          <a href="https://yandex.ru/maps/" class="map-small">
             <img class="about-us-map" src="img/map-small.jpg" width="300" height="158" alt="Большая Конюшенная ул., 19">
           </a>
           <button type="button" class="btn write-us-btn">Заблудились? Напишите нам</button>
@@ -455,6 +455,6 @@
     <a href="#" class="modal-close-btn">Закрыть окно</a>
     <img src="img/map.jpg" width="940" height="446" alt="Карта">
   </div>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
