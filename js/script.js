@@ -53,6 +53,25 @@ if(mapSmall && mapPopup){
 
 let writeUs = document.querySelector('.write-us-btn');
 let feedbackForm = document.querySelector('.feedback-modal');
+feedbackForm.addEventListener('submit', function(evt){    
+    let name = document.querySelector('[name=feedback-name]');
+    let description = document.querySelector('[name=feedback-description]');
+    if(!name.value || !description.value){
+        evt.preventDefault();
+    }
+    if(!name.value){
+        name.classList.add('feedback-input-error');
+    }
+    if(!description.value){
+        description.classList.add('feedback-input-error');
+    }
+    setTimeout(()=>{
+        name.classList.remove('feedback-input-error');
+        description.classList.remove('feedback-input-error');
+    },1000);
+
+},false);
+
 if(writeUs && feedbackForm){
     writeUs.addEventListener('click', function(evt){
         evt.preventDefault();

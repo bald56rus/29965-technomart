@@ -1900,6 +1900,9 @@ footer .address{
 
 .modal-show{
     display: block;
+    animation-name: bounceInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 
 .modal-close-btn{
@@ -1955,35 +1958,36 @@ footer .address{
     resize: none;
 }
 
-.feedback-modal input,
-.feedback-modal textarea{
+.feedback-input{
     padding: 10px;
     border: 2px solid #dee3e4;
     border-radius: 3px;
 }
 
-.feedback-modal input:hover,
-.feedback-modal textarea:hover{
+.feedback-input-error{
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.feedback-input:hover{
     outline: none;
     border: 2px solid #b5b5b5;
 }
 
-.feedback-modal input:focus,
-.feedback-modal textarea:focus{
+.feedback-input:focus{
     outline: none;
     border: 2px solid #ee3643;
 }
 
-.feedback-modal input::placeholder,
-.feedback-modal textarea::placeholder{
+.feedback-input::placeholder{
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: #a9a9a9;
 }
 
-.feedback-modal input::-ms-input-placeholder,
-.feedback-modal textarea::-ms-input-placeholder{
+.feedback-input::-ms-input-placeholder{
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -2081,3 +2085,59 @@ footer .address{
     padding-right: 44px;
     padding-left: 47px;
 }
+
+/*animation*/
+
+@keyframes bounceInDown {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: translate3d(-50%, -3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translate3d(-50%, 25px, 0);
+    }
+  
+    75% {
+      transform: translate3d(-50%, -10px, 0);
+    }
+  
+    90% {
+      transform: translate3d(-50%, 5px, 0);
+    }
+  
+    to {
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+
+  @keyframes shake {
+    from,
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translate3d(-10px, 0, 0);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translate3d(10px, 0, 0);
+    }
+  }
